@@ -1,4 +1,4 @@
-import easyimap
+import easyimap, re
 def run():
     login = 'yncrea.test.projet.M1@gmail.com'
     password = 'ujikolpm'
@@ -25,34 +25,37 @@ def run():
             i = 1
         new_email = list()
         try:
-            
+            boucle = 0
+            save_id = 0
             for mail_id in imapper.listids(limit=100):
+                if boucle == 0:
+                    save_id = mail_id
+                boucle += 1
                 mail = imapper.mail(mail_id)
                 new_email.append(mail)
-
+            
             if(len(new_email) > len(old_email)):
+                print(save_id)
                 traitement_mail(new_email[0])
             
             old_email = new_email
             
-            
-            
-        except IndexError as e:
-            print(e)
         except TypeError as e:
-            print("Des messages ont été supprimés")
+            print(e)
         old_email = new_email
-        
+
+    imapper.quit()  
 
 
 def traitement_mail(mail):
     save_email = open("save_mail.txt",'w')
-    print("Y a un nouveau mail")
-    save_email.write("From : " + str(mail.from_addr))
-    save_email.write("Return path : " + str(mail.return_path))
-    save_email.write("")
-    save_email.write("Body :\n" + str(mail.body))
-    
+    print("Nouveau mail")
+    for att in dir(mail):
+        if(re.match(r'^[a-zA-Z]',att)):
+            save_email.write(att)
+            save_email.write(" : ")
+            save_email.write(str(getattr(mail,att)))
+            save_email.write("\n")
     save_email.close()
     return 0
 
