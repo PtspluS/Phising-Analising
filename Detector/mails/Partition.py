@@ -8,7 +8,7 @@ def partition(mail, balise):
 
     if balise == "header":       
         
-        header = re.match(r"^((.|\n)*)<html>", mail);     
+        header = re.match(r"^((.|\n)*)<html", mail);     
         partie = header.group(1);
         
     if balise == "head":
@@ -113,7 +113,7 @@ def langage(typeMail):
 
 def norme(typeMail):  
     
-    norme = re.match(r"((.|\n)*); ((.|\n)*)$", typeMail, re.MULTILINE);
+    norme = re.match(r"((.)*); ((.)*)$", typeMail, re.MULTILINE);
     
     return norme.group(3);
 
