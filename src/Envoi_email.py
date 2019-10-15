@@ -1,17 +1,21 @@
 import smtplib, ssl
 
+global i
+i = 1
+
 def run():
         
-
+    global i
+    i += 1
     port = 587  # For starttls
     smtp_server = "smtp.gmail.com"
     sender_email = "yncrea.test.projet.M1@gmail.com"
-    receiver_email = "qboens@hotmail.fr"
+    receiver_email = "yncrea.test.projet.M1@gmail.com"
     password = "ujikolpm"
     message = """\
     Subject: Hi there
 
-    L'envoi d'un merveilleux message"""
+    L'envoi d'un merveilleux message""" + str(i)
     context = ssl.create_default_context()
     try : 
         with smtplib.SMTP(smtp_server, port) as server:
