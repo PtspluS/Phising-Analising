@@ -4,44 +4,78 @@ import Partition
 #Exemple utilisation des fonctions partition
 
 
+def extractDate(data):
+    
+    return Partition.date(Partition.header(data));
+    
+def extractTopic(data):
+    
+    return Partition.topic(Partition.header(data));
+    
+def extractSourceNom(data):
+    
+    return Partition.sourceNom(Partition.source(Partition.header(data)));
+    
+def extractSourceAdresse(data):
+    
+    return Partition.sourceAdresse(Partition.source(Partition.header(data)));
+    
+def extractDestinationNom(data):
+    
+    return Partition.destinationNom(Partition.destination(Partition.header(data)));
+    
+def extractDestinationAdresse(data):
+    
+    return Partition.destinationAdresse(Partition.destination(Partition.header(data)));
+    
+def extractLangage(data):
+    
+    return Partition.langage(Partition.typeMail(Partition.header(data)));
+    
+def extractNorme(data):
 
+    return Partition.norme(Partition.typeMail(Partition.header(data)));
+    
+def extractObjet(data):
+    
+    return Partition.objet(Partition.header(data));
+    
+def extractEncodageTransfert(data):
 
-def extractionPrint(filename):
+    return Partition.encodageTransfert(Partition.header(data));
+    
+    
+    
+    
+    
+    
+def extractionHeaderPrint(filename):
 
     mon_fichier = open(filename, "r");
     data = mon_fichier.read();
     mon_fichier.close();
     
+       
+
+    date = extractDate(data);  
     
+    topic = extractTopic(data);
 
+    objet = extractObjet(data);
 
-    header = Partition.header(data);
+    encodageTransfert = extractEncodageTransfert(data);
 
-    date = Partition.date(header);
+    sourceNom = extractSourceNom(data);
 
-    source = Partition.source(header);
+    sourceAdresse = extractSourceAdresse(data);
 
-    destination = Partition.destination(header);
+    destinationNom = extractDestinationNom(data);
 
-    typeMail =Partition.typeMail(header);
+    destinationAdresse = extractDestinationAdresse(data);
 
-    topic = Partition.topic(header);
+    langage = extractLangage(data);
 
-    objet = Partition.objet(header);
-
-    encodageTransfert = Partition.encodageTransfert(header);
-
-    sourceNom = Partition.sourceNom(source);
-
-    sourceAdresse = Partition.sourceAdresse(source);
-
-    destinationNom = Partition.destinationNom(destination);
-
-    destinationAdresse = Partition.destinationAdresse(destination);
-
-    langage = Partition.langage(typeMail);
-
-    norme = Partition.norme(typeMail);
+    norme = extractNorme(data);
 
 
     print("Date :")
@@ -85,24 +119,3 @@ def extractionPrint(filename):
     print(norme, "\n");
 
 
-print("Extraction de mail 0: \n");
-extractionPrint("email.txt");
-print("\n\n\n");
-
-
-print("Extraction de mail 1: \n");
-extractionPrint("email1.txt");
-print("\n\n\n");
-
-
-print("Extraction de mail 2: \n");
-extractionPrint("email2.txt");
-print("\n\n\n");
-
-print("Extraction de mail 3: \n");
-extractionPrint("email3.txt");
-print("\n\n\n");
-
-print("Extraction de mail 0: \n");
-extractionPrint("email0.txt");
-print("\n\n\n");
