@@ -1,4 +1,5 @@
 from BodyExtract import *
+from langdetect import detect
 
 class liste_mots():
     def __init__(self):
@@ -113,7 +114,8 @@ print("Mot du lexique argent présents :", lexique_argent)
 print("Mot du lexique finance présents :", lexique_finance)
 print("Mot du lexique marketing présents :", lexique_marketing)
 
-print('finance' in 'refinancement')
+print(detect(texte))
+
 
 
     
