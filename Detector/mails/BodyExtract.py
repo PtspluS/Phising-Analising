@@ -1,9 +1,12 @@
-# coding: utf-8
+# coding: utf8
 import Partition;
 import re;
+from codecs import open;
+import quopri
 
 
-mon_fichier = open("email0.txt", "r");
+
+mon_fichier = open("email1.txt", encoding="utf8");
 data = mon_fichier.read();
 mon_fichier.close();
 
@@ -11,17 +14,27 @@ mon_fichier.close();
 Body = Partition.body(data);
 
 
-print(Partition.texte(Partition.body(data)));
+newCut = re.sub(r"<[^>]*>", "", Body);
+
+quopri.a2b_qp = quopri.b2a_qp = None;
+
+chaineB = quopri.decodestring(bytes(newCut,encoding="utf-8"));
+
+chaine = str(chaineB, encoding="utf-8");
+
+print(chaine);
+
+#cut = bytes(newCut, encoding="ascii");
 
 
-newCut = re.sub(r"<[^>]*>", "", Body, re.UNICODE);
+
+#chaine = str(cut, encoding="utf-8");
 
 
 
 
 
-
-supLine = re.sub(r"[\n]", "", newCut);
+#supLine = re.sub(r"[\n]", "", newCut);
 
 
 #print(supLine);
