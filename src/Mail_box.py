@@ -2,6 +2,7 @@ import smtplib
 import ssl
 
 import Email
+from Link_analyser import *
 
 
 class Mail_box(object):
@@ -32,3 +33,4 @@ message = 'Test'
 mail_box = Mail_box(sender_email, password)
 email = Email.Email("", receiver_email, "test", "testy test")
 mail_box.send_mail(email)
+pasta()
