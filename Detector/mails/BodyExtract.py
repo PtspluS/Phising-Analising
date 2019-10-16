@@ -5,28 +5,29 @@ from codecs import open;
 import quopri
 
 
+#<<<<<<< Updated upstream
+def BodyExtract(fichier):
+    mon_fichier = open(fichier, encoding="utf8");
 
-mon_fichier = open("email1.txt", encoding="utf8");
-data = mon_fichier.read();
-mon_fichier.close();
+    data = mon_fichier.read();
+    mon_fichier.close();
 
-    
-Body = Partition.body(data);
+        
+    Body = Partition.body(data);
 
+    newCut = re.sub(r"<[^>]*>", "", Body);
 
-newCut = re.sub(r"<[^>]*>", "", Body);
+    quopri.a2b_qp = quopri.b2a_qp = None;
 
-quopri.a2b_qp = quopri.b2a_qp = None;
+    chaineB = quopri.decodestring(bytes(newCut,encoding="utf-8"));
 
-chaineB = quopri.decodestring(bytes(newCut,encoding="utf-8"));
+    chaine = str(chaineB, encoding="utf-8");
 
-chaine = str(chaineB, encoding="utf-8");
+    return chaine;
 
-print(chaine);
-
-#cut = bytes(newCut, encoding="ascii");
-
-
+"""
+newCut = re.sub(r"<[^>]*>", "", Body, re.UNICODE);
+>>>>>>> Stashed changes
 
 #chaine = str(cut, encoding="utf-8");
 
@@ -37,22 +38,22 @@ print(chaine);
 #supLine = re.sub(r"[\n]", "", newCut);
 
 
-#print(supLine);
+#print("\n",supLine);
 
 
-#accentAigu = re.sub(r"=C3=A9", "é", supLine);
+accentAigu = re.sub(r"=C3=A9", "é", supLine);
 
 
-#uChapeau = re.sub(r"=C3==BB", "û", accentAigu);
-
-
-
-#egale20 = re.sub(r"=20", "", uChapeau);
+uChapeau = re.sub(r"=C3==BB", "û", accentAigu);
 
 
 
-#print(egale20);
+egale20 = re.sub(r"=20", "", uChapeau);
 
 
+
+#print("\n\n",egale20);
+
+"""
 
 
