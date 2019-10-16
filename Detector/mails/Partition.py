@@ -8,17 +8,17 @@ def partition(mail, balise):
 
     if balise == "header":       
         
-        header = re.match(r"^((.|\n)*)<html", mail);     
+        header = re.match(r"^((.|\n)*)<html.", mail);     
         partie = header.group(1);
         
     if balise == "head":
 
-        head = re.match(r"^((.|\n)*)<html>((.|\n)*)<body>", mail);
+        head = re.match(r"^((.|\n)*)<head>((.|\n)*)</head>", mail);
         partie = head.group(3);
     
     if balise == "body":
 
-        body = re.match(r"^((.|\n)*)<body>((.|\n)*)</body>", mail);
+        body = re.match(r"^((.|\n)*)</head>((.|\n)*)</body>", mail);
         partie = body.group(3);
 
     return partie;
@@ -38,13 +38,13 @@ def header(mail):
 
 def date(header):
     
-    date = re.match(r"^((.|\n)*)Date: ((.|\n)*)From", header);
+    date = re.match(r"^((.|\n)*)Date: ((.)*)", header);
     
     return date.group(3);
 
 def source(header):
     
-    source = re.match(r"^((.|\n)*)From: ((.|\n)*)Subject", header);
+    source = re.match(r"^((.|\n)*)From: ((.)*)", header);
     
     return source.group(3);
 
@@ -61,21 +61,38 @@ def sourceNom(source):
     return sourceNom.group(1);
 
 def objet(header):
+          
+    objet = re.match(r"^((.|\n)*)Subject:((.)*)\n", header);
     
-    objet = re.match(r"^((.|\n)*)Subject:((.|\n)*)Thread-Topic", header);
+    objetTemp = objet.group(3);
+
     
-    return objet.group(3);
+    if len(objetTemp) < 2:
+        
+        newTemp = re.match(r"^((.|\n)*)Subject:\n ((.)*)", header);
+        
+        objetTemp = newTemp.group(3); 
+    
+    return objetTemp;
 
 def topic(header):
     
-    topic = re.match(r"^((.|\n)*)Topic:((.|\n)*)To: ", header);
+    topic = re.match(r"^((.|\n)*)Topic:((.)*)", header);
     
-    return topic.group(3);
+    topicTemp = topic.group(3);
+    
+    if len(topicTemp) < 2:
+        
+        newTemp = re.match(r"^((.|\n)*)Topic:\n ((.)*)", header);
+        
+        topicTemp = newTemp.group(3); 
+    
+    return topicTemp;
 
 
 def destination(header):
     
-    destination = re.match(r"^((.|\n)*)To: ((.|\n)*)Content-Transfer-Encoding: ", header);
+    destination = re.match(r"^((.|\n)*)\nTo:((.)*)", header);
     
     return destination.group(3);
 
@@ -87,21 +104,21 @@ def destinationAdresse(destination):
 
 def destinationNom(destination):
     
-    destinationNom = re.match(r"((.|\n)*) <", destination);
+    destinationNom = re.match(r' "((.)*)"', destination);
     
     return destinationNom.group(1);
 
 
 def encodageTransfert(header):
     
-    encodageTransfert = re.match(r"^((.|\n)*)Content-Transfer-Encoding: ((.|\n)*)Content-Type: ", header);
+    encodageTransfert = re.match(r"^((.|\n)*)Content-Transfer-Encoding: ((.)*)", header);
     
     return encodageTransfert.group(3);
 
 
 def typeMail(header):
     
-    typeMail = re.match(r"^((.|\n)*)Content-Type: ((.|\n)*)$", header);
+    typeMail = re.match(r"^((.|\n)*)Content-Type: ((.)*)", header);
     
     return typeMail.group(3);
 
@@ -113,8 +130,26 @@ def langage(typeMail):
 
 def norme(typeMail):  
     
-    norme = re.match(r"((.)*); ((.)*)$", typeMail, re.MULTILINE);
+    norme = re.match(r'((.)*)"((.)*)"', typeMail, re.MULTILINE);
     
     return norme.group(3);
+
+
+
+###############################################################################
+    
+
+def texte(body):
+    
+    newCut = re.sub(r"<[^>]*>", "", body);
+
+    supLine = re.sub(r"[\n]", "", newCut);
+
+    return supLine;
+
+
+
+
+
 
 

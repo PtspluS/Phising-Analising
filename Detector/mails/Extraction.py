@@ -3,11 +3,16 @@ import Partition
 
 #Exemple utilisation des fonctions partition
 
-def extraction(filename):
+
+
+
+def extractionPrint(filename):
 
     mon_fichier = open(filename, "r");
     data = mon_fichier.read();
     mon_fichier.close();
+    
+    
 
 
     header = Partition.header(data);
@@ -81,19 +86,23 @@ def extraction(filename):
 
 
 print("Extraction de mail 0: \n");
-extraction("email.txt");
+extractionPrint("email.txt");
 print("\n\n\n");
 
 
 print("Extraction de mail 1: \n");
-extraction("email1.txt");
+extractionPrint("email1.txt");
 print("\n\n\n");
 
 
 print("Extraction de mail 2: \n");
-extraction("email2.txt");
+extractionPrint("email2.txt");
 print("\n\n\n");
 
 print("Extraction de mail 3: \n");
-extraction("email3.txt");
+extractionPrint("email3.txt");
+print("\n\n\n");
+
+print("Extraction de mail 0: \n");
+extractionPrint("email0.txt");
 print("\n\n\n");
