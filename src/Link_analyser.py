@@ -135,7 +135,7 @@ def find_details(ip, JSON = False):
 analyse_link_from(links : [str])
     automatise the analyse for all links given in param (typically links from documents)
     return : 
-        - 
+        - average of links which point only on one think
 '''
 def analyse_link_from(links, all_concordance = False):
     annalyse = {}
@@ -143,7 +143,7 @@ def analyse_link_from(links, all_concordance = False):
         an = analyse_link(l)
         annalyse[l] = an
 
-    concordance_link = min(annalyse.values())
+    concordance_link = sum(annalyse.values())/len(annalyse.values())
     if all_concordance :
         return annalyse
     else :
@@ -151,4 +151,7 @@ def analyse_link_from(links, all_concordance = False):
 
 
 link = 'https://www.geeksforgeeks.org/python-program-find-ip-address/'
-analyse_link(link)
+link2 = 'https://netsec.ethz.ch/publications/papers/studer_esorics09.pdf'
+print(analyse_link(link))
+print(analyse_link(link2))
+print(analyse_link_from([link, link2]))
