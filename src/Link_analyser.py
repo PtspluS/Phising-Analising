@@ -91,10 +91,6 @@ def analyse_link(link):
     '''
     Analyse the data witch whose created before
     '''
-    print("country =", country_list)
-    print("ip = ", ip_list)
-    print("longitude = ", longitude_list)
-    print("latitude = ", latitude_list)
     medium_value_country = sum(country_list.values())/len(country_list.values())
     medium_value_ip = sum(ip_list.values())/len(ip_list.values())
     medium_value_longitude = sum(longitude_list.values())/len(longitude_list.values())
