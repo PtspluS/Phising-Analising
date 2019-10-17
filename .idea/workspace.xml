@@ -152,7 +152,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571232946756</updated>
       <workItem from="1571232949497" duration="13826000" />
-      <workItem from="1571306167133" duration="7709000" />
+      <workItem from="1571306167133" duration="8093000" />
     </task>
     <task id="LOCAL-00001" summary="create functions to analyse the link">
       <created>1571244805650</created>
@@ -175,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571312414847</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="extract data from link">
+      <created>1571314802771</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571314802771</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +210,7 @@
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail_box.coverage" NAME="Mail_box Coverage Results" MODIFIED="1571233684915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail_incoming.coverage" NAME="Mail_incoming Coverage Results" MODIFIED="1571141427648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail.coverage" NAME="Mail Coverage Results" MODIFIED="1571149577445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Phising_Analising$Link_analyser.coverage" NAME="Link_analyser Coverage Results" MODIFIED="1571314190939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Phising_Analising$Link_analyser.coverage" NAME="Link_analyser Coverage Results" MODIFIED="1571315143919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Email.coverage" NAME="Email Coverage Results" MODIFIED="1571149586733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$email_parser.coverage" NAME="email_parser Coverage Results" MODIFIED="1571131120778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Envoi_email.coverage" NAME="Envoi_email Coverage Results" MODIFIED="1571131198205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
