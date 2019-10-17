@@ -40,6 +40,30 @@ def analyse_link(link):
         ip = get_ip_from(url)
         details = find_details(ip)
 
+        '''
+        Create the data to analyse 
+        country_list = { country : str, weight : float} 
+                                            |_> weight is the number of time link point on the country
+        ip_list = {ip : str, weight : float} 
+        latitude_list = {latitude : float, weight : float}
+        longitude_list = {longitude : float, weight : float}
+        
+        example for weight :
+            if the link is "http://www.example.com/another-path/again_another_path/index.html"
+            the link is in 4 parts witch are :
+                https://www.example.com
+                https://www.example.com/another_path
+                http://www.example.com/another-path/again_another_path/
+                http://www.example.com/another-path/again_another_path/index.html
+            
+            if all the link point on GB for example, country list will looks like :
+                country_list = {"GB":1}
+            
+            else if just the last link point on another country, country list will looks like :
+                country_list = {"GB" : 3/4, "FR" : 1/4}
+                
+            it's the same logical for all the list
+        '''
         # test if the country are already check. If not, add the country to the list and give it a weight
         if(key_dic(details.country, country_list)):
             country_list[details.country] += weight
@@ -64,7 +88,19 @@ def analyse_link(link):
         else:
             longitude_list[details.longitude] = weight
 
-
+    '''
+    Analyse the data witch whose created before
+    '''
+    print("country =", country_list)
+    print("ip = ", ip_list)
+    print("longitude = ", longitude_list)
+    print("latitude = ", latitude_list)
+    medium_value_country = sum(country_list.values())/len(country_list.values())
+    medium_value_ip = sum(ip_list.values())/len(ip_list.values())
+    medium_value_longitude = sum(longitude_list.values())/len(longitude_list.values())
+    medium_value_latitude = sum(latitude_list.values())/len(latitude_list.values())
+    concordance = min([medium_value_country, medium_value_ip, medium_value_latitude, medium_value_longitude])
+    return concordance
 
 
 '''
@@ -115,4 +151,4 @@ def analyse_link_from(links):
 
 
 link = 'https://www.geeksforgeeks.org/python-program-find-ip-address/'
-analyse_link(link)
+print(analyse_link(link))
