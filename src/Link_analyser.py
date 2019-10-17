@@ -151,6 +151,4 @@ def analyse_link_from(links, all_concordance = False):
 
 
 link = 'https://www.geeksforgeeks.org/python-program-find-ip-address/'
-link2 = 'https://netsec.ethz.ch/publications/papers/studer_esorics09.pdf'
-print(analyse_link(link))
-print(analyse_link_from([link, link2]))
+analyse_link(link)
