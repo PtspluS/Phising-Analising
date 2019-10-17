@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9649e515-bd80-4cba-82c9-cd3c2d7789ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Email_extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9649e515-bd80-4cba-82c9-cd3c2d7789ae" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +174,7 @@
       <workItem from="1571232949497" duration="13826000" />
       <workItem from="1571306167133" duration="7366000" />
       <workItem from="1571315293486" duration="7472000" />
-      <workItem from="1571342688481" duration="4254000" />
+      <workItem from="1571342688481" duration="5059000" />
     </task>
     <task id="LOCAL-00001" summary="create functions to analyse the link">
       <created>1571244805650</created>
@@ -186,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571244805650</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="able to extract text from body as str or tab">
+      <created>1571351306747</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571351306747</updated>
+    </task>
+    <task id="LOCAL-00003" summary="able to separate and extract all part of the email">
+      <created>1571352073951</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571352073951</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,13 +219,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create functions to analyse the link" />
     <MESSAGE value="extract data from link" />
-    <option name="LAST_COMMIT_MESSAGE" value="extract data from link" />
+    <MESSAGE value="able to extract text from body as str or tab" />
+    <MESSAGE value="able to separate and extract all part of the email" />
+    <option name="LAST_COMMIT_MESSAGE" value="able to separate and extract all part of the email" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail_box.coverage" NAME="Mail_box Coverage Results" MODIFIED="1571233684915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Clustering.coverage" NAME="Clustering Coverage Results" MODIFIED="1571348520074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail_incoming.coverage" NAME="Mail_incoming Coverage Results" MODIFIED="1571141427648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Phising_Analising$Email_extractor.coverage" NAME="Email_extractor Coverage Results" MODIFIED="1571351271226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Phising_Analising$Email_extractor.coverage" NAME="Email_extractor Coverage Results" MODIFIED="1571352046815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail.coverage" NAME="Mail Coverage Results" MODIFIED="1571149577445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Link_analyser.coverage" NAME="Link_analyser Coverage Results" MODIFIED="1571329102263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Email.coverage" NAME="Email Coverage Results" MODIFIED="1571149586733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />

@@ -8,8 +8,8 @@ extract_header(plainText_email : str)
         - return the header (str)
 '''
 def extract_header(plainText_email):
-    header = re.findall("(.+\n+)+</head>", plainText_email)
-    return header
+    header = re.split("<body.*>", plainText_email)
+    return header[0]
 
 
 '''
@@ -19,8 +19,8 @@ extract_body(plainText_email : str)
         - return the body (str)
 '''
 def extract_body(plainText_email):
-    txt = re.findall("<body(.*\n*)*/html>", plainText_email)
-    return txt
+    txt = re.split("</head>", plainText_email)
+    return txt[1]
 
 
 '''
@@ -42,6 +42,8 @@ def extract_text_full(plainText_email):
     return tt
 
 f = open("../email.txt", 'r')
-print(extract_header(f.read()))
-#print(extract_text_full(f.read()))
+#print(extract_header(f.read()))
+#print(extract_body(f.read()))
+#print(extract_text(f.read()))
+print(extract_text_full(f.read()))
 f.close()
