@@ -160,6 +160,14 @@ def texte(body):
     return chaine;
 
 
+def image(data):
+    
+    image = re.findall(r'<[img src]+=3D\"([^\"*]+)', data, re.MULTILINE);
+    
+    return image;
+    
+    
+
 
 
 

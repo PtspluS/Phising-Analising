@@ -44,7 +44,11 @@ def extractEncodageTransfert(data):
 
     return Partition.encodageTransfert(Partition.header(data));
     
+def extractImage(data):
+
+    return Partition.image(data);
     
+       
     
 def extractionHeaderPrint(filename):
 
@@ -74,6 +78,7 @@ def extractionHeaderPrint(filename):
 
     norme = extractNorme(data);
 
+    image = extractImage(data);
 
     print("Date :")
 
@@ -115,6 +120,9 @@ def extractionHeaderPrint(filename):
 
     print(norme, "\n");
 
+    print("Image :");
+
+    print(image, "\n");
 
 ###############################################################################
     
