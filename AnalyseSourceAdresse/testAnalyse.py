@@ -5,8 +5,8 @@ import AnalyseSource;
 adresse ="antoine.g2210@gmail.com";
 nom ="Antoine Genonceau";
 
-tabAdresse =["offers@wish.com", "uber@uber.com","bonsplans@newsletter.oui.sncf", "no-reply@duolingo.com", "no-reply@stellarprofits.top", "zVjR59572l@amazongiftreward.com"];
-tabNom =["Wish", "Uber Eats", "OUI.sncf", "Duolingo", "Keto Shark Tank", "Récompenses Amazon"];
+tabAdresse =["qboens@hotmail.fr", "uber@uber.com","bonsplans@newsletter.oui.sncf", "no-reply@duolingo.com", "no-reply@stellarprofits.top", "zVjR59572l@amazongiftreward.com"];
+tabNom =["Quentin Bons", "Uber Eats", "OUI.sncf", "Duolingo", "Keto Shark Tank", "Récompenses Amazon"];
 
 for i in range(len(tabAdresse)):
     
