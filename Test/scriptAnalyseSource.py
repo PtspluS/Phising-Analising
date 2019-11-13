@@ -35,3 +35,5 @@ def analyseSource(filename):
             result == 2;
             
     return result;
+
+print(analyseSource("mailsTest/email2.txt"));

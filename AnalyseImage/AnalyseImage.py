@@ -19,11 +19,10 @@ def analyseLien(tabLien, nom):
         
             lien = tabLien[i];
             
-            if (lien.find(nom) != -1):
+            if (lien.lower().find(nom.lower()) != -1):
                 
                 nombreLiensConformes = nombreLiensConformes + 1;
 
         ratio = nombreLiensConformes / nombreLiens;
     
     return ratio;
-
