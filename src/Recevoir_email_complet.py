@@ -78,24 +78,24 @@ while True:
 
         print("Résultat traitement :", sortie_traitement)
 
-        if(sortie_traitement == 1):
+        if(sortie_traitement == 3):
             result_move, err_mes = mail.uid('move',latest_email_uid,"sur")
             if(result_move =='OK'):
-                print("Mail", str(latest_email_uid), "déplacé avec succès")
+                print("Mail", str(latest_email_uid), "déplacé dans sur")
             else:
                 print(err_mes)
 
         elif(sortie_traitement == 2):
             result_move, err_mes = mail.uid('move',latest_email_uid,"moyen")
             if(result_move =='OK'):
-                print("Mail", str(latest_email_uid), "déplacé avec succès")
+                print("Mail", str(latest_email_uid), "déplacé dans moyen")
             else:
                 print(err_mes)
 
         else:
             result_move, err_mes = mail.uid('move',latest_email_uid,"danger")
             if(result_move =='OK'):
-                print("Mail", str(latest_email_uid), "déplacé avec succès")
+                print("Mail", str(latest_email_uid), "déplacé dans danger")
             else:
                 print(err_mes)
 
