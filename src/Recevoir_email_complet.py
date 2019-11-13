@@ -14,6 +14,7 @@ def efface_old_mail():
     while not arret:
         if os.path.exists("email"+str(x)+".txt"):
           os.remove("email"+str(x)+".txt")
+          x += 1
         else:
           print("Fichiers supprimés")
           arret = True
