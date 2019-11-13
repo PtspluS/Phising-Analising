@@ -41,9 +41,23 @@ def extract_text_full(plainText_email):
         tt += i
     return tt
 
-f = open("../email.txt", 'r')
-#print(extract_header(f.read()))
-#print(extract_body(f.read()))
-#print(extract_text(f.read()))
-print(extract_text_full(f.read()))
-f.close()
+"""
+find_language(plainText_email : str)
+    find the language
+    return :
+        - return the language
+"""
+def find_language(plainText_email):
+    lang = re.findall('lang\=\"\w*\"', plainText_email)
+    res = """"""
+    inBracket = False
+
+    for s in lang[0]:
+        if s == '"' or s == "'":
+            inBracket = not inBracket
+            continue
+        if inBracket :
+            res += s
+
+    return res
+
