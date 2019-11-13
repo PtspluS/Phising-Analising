@@ -13,6 +13,11 @@ class Email:
         else:
             self.type = 'html'
 
+        self.header = self.extract_header()
+        self.body = self.extract_body()
+        self.text = self.extract_text_full()
+        self.lang = self.find_language()
+
     '''
     extract_header()
         extract the header part of the email
