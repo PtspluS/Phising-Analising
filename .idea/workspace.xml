@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9649e515-bd80-4cba-82c9-cd3c2d7789ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Neural_Network.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Neural_Network.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Neural_Network.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +184,7 @@
       <workItem from="1573568462342" duration="3428000" />
       <workItem from="1573640283891" duration="5575000" />
       <workItem from="1573654699907" duration="6414000" />
-      <workItem from="1573727195594" duration="6498000" />
+      <workItem from="1573727195594" duration="6701000" />
     </task>
     <task id="LOCAL-00001" summary="create functions to analyse the link">
       <created>1571244805650</created>
@@ -242,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573738653383</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="object IA created">
+      <created>1573740666346</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573740666346</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +278,8 @@
     <MESSAGE value="correct error pointer" />
     <MESSAGE value="annalise frequency misspell" />
     <MESSAGE value="Email getter return now copy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Email getter return now copy" />
+    <MESSAGE value="object IA created" />
+    <option name="LAST_COMMIT_MESSAGE" value="object IA created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

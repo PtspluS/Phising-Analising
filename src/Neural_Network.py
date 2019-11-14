@@ -1,4 +1,3 @@
-import numpy as np
 from keras.models import Sequential, load_model
 from keras.layers import Dense
 from keras.optimizers import Adam
