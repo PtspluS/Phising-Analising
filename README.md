@@ -36,10 +36,11 @@ To run this project you need to install packages which are :
 * [requests](https://pypi.org/project/requests/2.7.0/) 
 `pip install request`
 * [tensorflow](https://www.tensorflow.org/) or [tensorflow_gpu](https://www.tensorflow.org/install/gpu) (if you have a gpu compatible)
-`pip install `
+`pip install tensorflow`
 `pip install tensorflow-gpu`
 If you decide to use your gpu please install [Cuda](https://developer.nvidia.com/cuda-zone) (nowadays Cuda 10.0 is stabler than Cuda 10.*) 
-
+* [keras](https://keras.io/)
+`pip install keras`
 
 
 ## Team
