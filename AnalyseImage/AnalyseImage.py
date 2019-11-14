@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov 13 10:09:40 2019
 
-@author: Toine
+La fonction analyseLienImage retourne un nombre entre 0 et 1
+
 """
 
 
-def analyseLien(tabLien, nom):
+def analyseLienImage(tabLien, nom):
     
     ratio = 0
     nombreLiens = len(tabLien)
