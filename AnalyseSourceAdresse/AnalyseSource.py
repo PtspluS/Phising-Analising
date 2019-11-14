@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
+"""
 
+La fonction analyse retourne un tableau de 3 entiers
+
+"""
 
 import re;
 
