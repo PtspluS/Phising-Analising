@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9649e515-bd80-4cba-82c9-cd3c2d7789ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Grammar_annalisis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clustering.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Email.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Email_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Email_extractor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +184,7 @@
       <workItem from="1573568462342" duration="3428000" />
       <workItem from="1573640283891" duration="5575000" />
       <workItem from="1573654699907" duration="6414000" />
-      <workItem from="1573727195594" duration="2665000" />
+      <workItem from="1573727195594" duration="4627000" />
     </task>
     <task id="LOCAL-00001" summary="create functions to analyse the link">
       <created>1571244805650</created>
@@ -231,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573657331684</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="annalise frequency misspell">
+      <created>1573730059132</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573730059132</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +262,8 @@
     <MESSAGE value="Create object Email" />
     <MESSAGE value="auto create from brut text in the init" />
     <MESSAGE value="correct error pointer" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct error pointer" />
+    <MESSAGE value="annalise frequency misspell" />
+    <option name="LAST_COMMIT_MESSAGE" value="annalise frequency misspell" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -116,17 +116,17 @@ class Email:
 
     # get header
     def get_header(self):
-        return self.header
+        return (self.header+'.')[:-1]
 
     # get body
     def get_body(self):
-        return self.body
+        return (self.body+'.')[:-1]
 
     # get text
     def get_text(self):
-        return self.text
+        return (self.text+'.')[:-1]
 
     # get language
     def get_language(self):
-        return self.lang
+        return (self.lang+'.')[:-1]
 
