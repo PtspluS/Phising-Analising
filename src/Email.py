@@ -79,7 +79,7 @@ class Email:
         email_brut = (txt + '.')[:-1]
         if self.type == 'html':
             txt = re.findall("<p class=\"MsoNormal\">(.+?)<o:p>", email_brut)
-            tt = ''
+            tt = """"""
             for i in txt:
                 tt += i
             return tt

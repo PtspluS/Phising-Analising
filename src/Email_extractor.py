@@ -36,7 +36,7 @@ def extract_text(plainText_email):
 # same as before but only return str
 def extract_text_full(plainText_email):
     txt = re.findall("<p class=\"MsoNormal\">(.+?)<o:p>", plainText_email)
-    tt = ''
+    tt = """"""
     for i in txt:
         tt += i
     return tt
