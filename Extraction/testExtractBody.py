@@ -5,10 +5,10 @@ Created on Wed Oct 16 13:44:29 2019
 @author: Toine
 """
 
-import Extraction;
+import Extraction
 
-mon_fichier = open("mailsTest/email2.txt");
-data = mon_fichier.read();
-mon_fichier.close();
+mon_fichier = open("mailsTest/email2.txt")
+data = mon_fichier.read()
+mon_fichier.close()
 
-print(Extraction.extractTexte(data));
+print(Extraction.extractTexte(data))

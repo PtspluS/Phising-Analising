@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 
 
-import re;
+import re
 
 
 def rechercheMot(chaine, fichier, longeur):
     
-    mon_fichier = open(fichier);
-    listePrenom = mon_fichier.read();
-    mon_fichier.close();
+    mon_fichier = open(fichier)
+    listePrenom = mon_fichier.read()
+    mon_fichier.close()
     
-    motTrouve = "";
+    motTrouve = ""
     
     for i in range(len(chaine)):
     
@@ -18,67 +18,67 @@ def rechercheMot(chaine, fichier, longeur):
         
             if j > i - 1:
         
-                newCutChaine = chaine[i:j + 1];
+                newCutChaine = chaine[i:j + 1]
         
-                recherche = re.search(r""+str(newCutChaine)+"", listePrenom, re.MULTILINE);
+                recherche = re.search(r""+str(newCutChaine)+"", listePrenom, re.MULTILINE)
         
                 if recherche and len(recherche.group()) > longeur - 1 and len(recherche.group()) > len(motTrouve):
                 
-                    motTrouve = recherche.group();
+                    motTrouve = recherche.group()
     
     
-    return motTrouve;
+    return motTrouve
 
 
 
 def creationListeMotsAdresse(adresse, fichier):
 
-    adressePropreTab = adresse.split("@");
+    adressePropreTab = adresse.split("@")
     
-    adressePropre = str(adressePropreTab[0]) + str(adressePropreTab[1]);
+    adressePropre = str(adressePropreTab[0]) + str(adressePropreTab[1])
     
-    tab = adressePropre.split(".");
+    tab = adressePropre.split(".")
 
     
 
-    longeur = len(tab);
+    longeur = len(tab)
     
     
 
-    i = 0;
+    i = 0
     
     while i < longeur:
     
         
-        motTrouve = rechercheMot(tab[i], fichier, 3);
+        motTrouve = rechercheMot(tab[i], fichier, 3)
     
             
         if motTrouve != tab[i] and len(motTrouve) > 2:
             
                     
-            tab[i] = tab[i].split(motTrouve);
+            tab[i] = tab[i].split(motTrouve)
         
-            tab.append(motTrouve);
+            tab.append(motTrouve)
         
-            longeur  = longeur + len(tab[i]);
+            longeur  = longeur + len(tab[i])
         
             for j in range(len(tab[i])):
             
-                tab.append(tab[i][j]);
+                tab.append(tab[i][j])
                     
-            del tab[i];
+            del tab[i]
         
         
-            i = i - 1;
+            i = i - 1
         
         if len(motTrouve) < 3:
         
-            tab[i] = False;
+            tab[i] = False
         
-        i = i + 1;
+        i = i + 1
         
         
-    return tab;
+    return tab
 
 
 
@@ -86,11 +86,11 @@ def creationListeMotsAdresse(adresse, fichier):
 
 def extention(adresse):
     
-    membreDroite = adresse.split("@")[1];
+    membreDroite = adresse.split("@")[1]
     
-    membreDroiteTab = membreDroite.split("."); 
+    membreDroiteTab = membreDroite.split(".")
     
-    return membreDroiteTab[len(membreDroiteTab) - 1];
+    return membreDroiteTab[len(membreDroiteTab) - 1]
 
 
 
@@ -98,54 +98,54 @@ def creationListeMotsNom(nom, fichier):
 
     
     
-    tab = nom.lower().split(".");
+    tab = nom.lower().split(".")
 
     
 
-    longeur = len(tab);
+    longeur = len(tab)
     
     
 
-    i = 0;
+    i = 0
     
     while i < longeur:
     
         
-        motTrouve = rechercheMot(tab[i], fichier, 3);
+        motTrouve = rechercheMot(tab[i], fichier, 3)
     
             
         if motTrouve != tab[i] and len(motTrouve) > 2:
             
                     
-            tab[i] = tab[i].split(motTrouve);
+            tab[i] = tab[i].split(motTrouve)
         
-            tab.append(motTrouve);
+            tab.append(motTrouve)
         
-            longeur  = longeur + len(tab[i]);
+            longeur  = longeur + len(tab[i])
         
             for j in range(len(tab[i])):
             
-                tab.append(tab[i][j]);
+                tab.append(tab[i][j])
                     
-            del tab[i];
+            del tab[i]
         
         
-            i = i - 1;
+            i = i - 1
         
         if len(motTrouve) < 3:
         
-            tab[i] = False;
+            tab[i] = False
         
-        i = i + 1;
+        i = i + 1
         
         
-    return tab;
+    return tab
 
 
 
 def analyseComparaisonNomAdresse(nom, adresse):
     
-    compteur = 0;
+    compteur = 0
     
     for i in range(len(nom)):
         
@@ -153,23 +153,23 @@ def analyseComparaisonNomAdresse(nom, adresse):
             
             if nom[i] != False and nom[i] == adresse[j]:
                 
-                compteur = compteur + 1;
+                compteur = compteur + 1
     
     
-    return compteur;      
+    return compteur
 
 
 
 
 def analyseExtention(extention, listeNom):
     
-    mon_fichier = open("wordlist/extensions.txt", encoding="utf8");
-    listeExtensions = mon_fichier.read();
-    mon_fichier.close();
-    comparaisonExtention = 0;
-    extentionSafe = 0;
+    mon_fichier = open("wordlist/extensions.txt", encoding="utf8")
+    listeExtensions = mon_fichier.read()
+    mon_fichier.close()
+    comparaisonExtention = 0
+    extentionSafe = 0
       
-    recherche = re.search(r""+str(extention)+"$", listeExtensions, re.MULTILINE);
+    recherche = re.search(r""+str(extention)+"$", listeExtensions, re.MULTILINE)
         
                
     if recherche:
@@ -177,38 +177,38 @@ def analyseExtention(extention, listeNom):
         if extention == recherche.group(0):
             
                        
-            extentionSafe = 1;
+            extentionSafe = 1
             
     if extentionSafe == 0:
             
             
-            tabUnitaire = [0];
+            tabUnitaire = [0]
     
-            tabUnitaire[0] = extention;
+            tabUnitaire[0] = extention
     
     
-            comparaisonExtention = analyseComparaisonNomAdresse(tabUnitaire, listeNom);  
+            comparaisonExtention = analyseComparaisonNomAdresse(tabUnitaire, listeNom)
     
    
         
-    return extentionSafe + comparaisonExtention;
+    return extentionSafe + comparaisonExtention
 
 
 def analyseSignification(listeAdresseGauche):
     
-    listeMot = listeAdresseGauche;
+    listeMot = listeAdresseGauche
     
-    compteur = 0;
+    compteur = 0
     
     for i in range(len(listeMot)):
         
         if listeMot[i] != False:
             
-            compteur = compteur + 1;
+            compteur = compteur + 1
             
     
     
-    return compteur;
+    return compteur
     
 
 
@@ -216,14 +216,14 @@ def analyseSignification(listeAdresseGauche):
 
 def analyse(nom, adresse):
 
-    listeAdresse = creationListeMotsAdresse(adresse, "wordlist/francais-prenoms.txt") + creationListeMotsAdresse(adresse, "wordlist/words.txt") + creationListeMotsAdresse(adresse, "wordlist/entreprises.txt");
-    listeNom = creationListeMotsNom(nom, "wordlist/francais-prenoms.txt") + creationListeMotsNom(nom, "wordlist/words.txt") + creationListeMotsAdresse(adresse, "wordlist/entreprises.txt");    
-    listeAdresseGauche = creationListeMotsNom(adresse.split("@")[0], "wordlist/francais-prenoms.txt") + creationListeMotsNom(adresse.split("@")[0], "wordlist/words.txt") + creationListeMotsNom(adresse.split("@")[0], "wordlist/entreprises.txt");
+    listeAdresse = creationListeMotsAdresse(adresse, "wordlist/francais-prenoms.txt") + creationListeMotsAdresse(adresse, "wordlist/words.txt") + creationListeMotsAdresse(adresse, "wordlist/entreprises.txt")
+    listeNom = creationListeMotsNom(nom, "wordlist/francais-prenoms.txt") + creationListeMotsNom(nom, "wordlist/words.txt") + creationListeMotsAdresse(adresse, "wordlist/entreprises.txt")
+    listeAdresseGauche = creationListeMotsNom(adresse.split("@")[0], "wordlist/francais-prenoms.txt") + creationListeMotsNom(adresse.split("@")[0], "wordlist/words.txt") + creationListeMotsNom(adresse.split("@")[0], "wordlist/entreprises.txt")
 
-    comparaisonAnalyse = analyseComparaisonNomAdresse(listeNom, listeAdresse);# compteur
-    extentionAnalyse = analyseExtention(extention(adresse), listeNom);# binaire
-    significationAnalyse = analyseSignification(listeAdresseGauche);# compteur
+    comparaisonAnalyse = analyseComparaisonNomAdresse(listeNom, listeAdresse)# compteur
+    extentionAnalyse = analyseExtention(extention(adresse), listeNom)# binaire
+    significationAnalyse = analyseSignification(listeAdresseGauche)# compteur
         
                    
-    return [extentionAnalyse, comparaisonAnalyse, significationAnalyse];
+    return [extentionAnalyse, comparaisonAnalyse, significationAnalyse]
 

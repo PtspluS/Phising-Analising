@@ -8,21 +8,21 @@ Created on Wed Nov 13 10:09:40 2019
 
 def analyseLien(tabLien, nom):
     
-    ratio = 0;
-    nombreLiens = len(tabLien);
-    nombreLiensConformes = 0;
-    lien = "";
+    ratio = 0
+    nombreLiens = len(tabLien)
+    nombreLiensConformes = 0
+    lien = ""
     
     if nombreLiens > 0: 
         
         for i in range(len(tabLien)):
         
-            lien = tabLien[i];
+            lien = tabLien[i]
             
             if (lien.lower().find(nom.lower()) != -1):
                 
-                nombreLiensConformes = nombreLiensConformes + 1;
+                nombreLiensConformes = nombreLiensConformes + 1
 
-        ratio = nombreLiensConformes / nombreLiens;
+        ratio = nombreLiensConformes / nombreLiens
     
-    return ratio;
+    return ratio

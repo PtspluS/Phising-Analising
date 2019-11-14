@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-import re;
+import re
 
 
 def rechercheMot(chaine, fichier, longeur):

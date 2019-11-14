@@ -3,7 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="9649e515-bd80-4cba-82c9-cd3c2d7789ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Neural_Network.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Neural_Network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseImage/AnalyseImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/AnalyseImage/AnalyseImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/AnalyseSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/AnalyseSourceAdresse/AnalyseSource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/testAnalyse.py" beforeDir="false" afterPath="$PROJECT_DIR$/AnalyseSourceAdresse/testAnalyse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Detection/detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Detection/detector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Detector/mails/BodyExtract.py" beforeDir="false" afterPath="$PROJECT_DIR$/Detector/mails/BodyExtract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/Extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/Extraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/Partition.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/Partition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/TestExtraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/TestExtraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/testExtractBody.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/testExtractBody.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/AnalyseSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/AnalyseSource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Extraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Partition.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Partition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/scriptAnalyseSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/scriptAnalyseSource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import AnalyseSource;
+import AnalyseSource
 
 adresse ="antoine.g2210@gmail.com";
 nom ="Antoine Genonceau";
