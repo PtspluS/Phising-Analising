@@ -1,0 +1,15 @@
+com
+fr
+org
+info
+net
+gov
+edu
+coop
+mil
+museum
+be
+uh
+us
+uk
+de
