@@ -1,3 +1,23 @@
-From : yncrea.test.projet.m1@gmail.com
-    Subject: Hi thereReturn path : <yncrea.test.projet.m1@gmail.com>Body :
-    L'envoi d'un merveilleux message28
+attachments : []
+body : Il s’agit d’un essai
+
+
+cc : None
+content_transfer_encoding : None
+content_type : multipart/alternative;
+	boundary="_000_AM0PR01MB6145E547A0BA59D64FF9DEBEBE930AM0PR01MB6145eurp_"
+date : Tue, 15 Oct 2019 14:03:25 +0000
+delivered_to : yncrea.test.projet.m1@gmail.com
+from_addr : Quentin Boëns <qboens@hotmail.fr>
+in_reply_to : None
+message_id : 
+ <AM0PR01MB6145E547A0BA59D64FF9DEBEBE930@AM0PR01MB6145.eurprd01.prod.exchangelabs.com>
+mime_version : 1.0
+raw : None
+references : None
+reply_to : None
+return_path : <qboens@hotmail.fr>
+sender : None
+title : Faisons un essai
+to : "yncrea.test.projet.M1@gmail.com" <yncrea.test.projet.M1@gmail.com>
+uid : 128
