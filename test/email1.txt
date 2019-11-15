@@ -1,0 +1,193 @@
+Delivered-To: yncrea.test.projet.m1@gmail.com
+Received: by 2002:a25:2c48:0:0:0:0:0 with SMTP id s69csp4660606ybs;
+        Fri, 15 Nov 2019 04:53:20 -0800 (PST)
+X-Google-Smtp-Source: APXvYqxmX8jMiMxSnqydLdlWPKfRM0yhzFOB6XO4wtOa+I+/w4JqMawhSU9LXhRMw7ObdWBVBK0J
+X-Received: by 2002:a1c:3c43:: with SMTP id j64mr14465713wma.13.1573822400618;
+        Fri, 15 Nov 2019 04:53:20 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1573822400; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=ttL0o3Vb4m8vd6k++gGrIoNldvdQMKlh+p0niTnvSr7iU32zfVbRFcxsZGp3Egmsgk
+         47msbfJGr71bR1jKdQmTyCkOFlBMEyUKphQAUME9qPqNo5p6i8u8dkAJI74O9WpHm86o
+         773WtTG7vylEKKQQ8VnHuptHaDwp3VVrifFx3Ep+ct8ksXqqEO2pegNYiL2LkPJSDv9Q
+         U6I2QKjsDtQec20CxITCvzYWWIvquQgmMNeZVm3aHzAA+DRMYIiy2EVy6Nb/g+BA64yA
+         /DGFjx3lRtSmeH3pHvlrQzyAMISKXoTJPwyQ9YwsFXaOXqdXJo+6lRZlDLi6l+Le1fEz
+         2ptQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:to:from;
+        bh=/d+JMofBNuDPkyi6HgQPRmpRiGe8l0R1HBFerhbzFzM=;
+        b=GutCrQd9nFYArp9zkqEM1XtPTVrRb1wLrI5wBKJgykSa5U2rK7y/aQbQOGS6XiXDP8
+         LvQRwI4FUyai+D1W09WwdrzNJ6ffyOyH7ghNYb7xlx8SUH/wjrAf6Dcfnn/zAlO4NDIw
+         GTq0ejYNZC55a/hn0mzvxfaXiTZE8Vua0zMDGZe0+9zkNafQDyyvyu/xH7GecwMoBEby
+         5sw2/J1z0A4c5bLIO+9/0AL+iKd7jCWmCzap47BlzW/E6M7JOO72aNnZ4JQuNtaU3zi/
+         I1C5U+1sWR7OoBbsxTL4Z/3y6MTrZ/Xr+k2iNnsT2qdFFn/B2TjKcy+NlXlt6If1yKWV
+         S2Jw==
+ARC-Authentication-Results: i=2; mx.google.com;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of qboens@hotmail.fr designates 40.92.65.48 as permitted sender) smtp.mailfrom=qboens@hotmail.fr;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.fr
+Return-Path: <qboens@hotmail.fr>
+Received: from EUR01-HE1-obe.outbound.protection.outlook.com (mail-oln040092065048.outbound.protection.outlook.com. [40.92.65.48])
+        by mx.google.com with ESMTPS id b31si3810037edb.302.2019.11.15.04.53.20
+        for <yncrea.test.projet.M1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 15 Nov 2019 04:53:20 -0800 (PST)
+Received-SPF: pass (google.com: domain of qboens@hotmail.fr designates 40.92.65.48 as permitted sender) client-ip=40.92.65.48;
+Authentication-Results: mx.google.com;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of qboens@hotmail.fr designates 40.92.65.48 as permitted sender) smtp.mailfrom=qboens@hotmail.fr;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.fr
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=TepLEkrErfyd5Pf45Tek0hio17AQ4Vh6YTvSschjXsa9hWNAoRKlbmRn1Ab3i53NYRB7TSD7RrLLm/Zw0prfrqJbOmfA4xGyxBDYxoE3/sk0QaVZZ4pZcu79+3AqMLJGbjH5rBzY64e9XuFBLlfmPkwoSqZaaFeAd3NfOba3Ar2RKwBrKJEQ6H+n9dKFyWWSNQGHjScvrRXx4yGbIFRey9l8P0iqrDvj6C8S1AXAtruH6LRUfAQM7U8AeFd8ZW/coTGMePabSVgHU92/mA6Ok4to9NCXh496odPvh0w28z1R688v5AqtDSejnf+nSVDCH9FT1axJRbteL1N7WRKJDg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=/d+JMofBNuDPkyi6HgQPRmpRiGe8l0R1HBFerhbzFzM=;
+ b=RheQAKggVwZOLZGPHxaXVj9tL66X9KBcPCFKb4Xtvo4usg6vlE6Dm0vaas7YEhrWWbG+gdTv3yfu3bNJwt0XGi+lzMP11da2vgcv27ZFd8fzRXF8z9GVdkiMU4LWlpxQCwNFaukbfrKJrgznKnFy2ZefxaN88n3wAVUv6etQ56GuSb8WYqrxQsJSPUzhoh1az6eHMXaVJ8zMWIs0cmUXDQEqVRa7KyiLajy7vtDCeg4L9hgZ3QiipT3GWmRqY4mdt++kUSetXwIzkcim1MgdY34bipctH2OlwwfGuYIiqzZJ+FCsuzSMx6MYQ3TCwzNBdWih+dWTVkkDN0uYibvIrQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+Received: from VE1EUR01FT052.eop-EUR01.prod.protection.outlook.com
+ (10.152.2.60) by VE1EUR01HT147.eop-EUR01.prod.protection.outlook.com
+ (10.152.3.215) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2451.23; Fri, 15 Nov
+ 2019 12:53:19 +0000
+Received: from AM0PR01MB6145.eurprd01.prod.exchangelabs.com (10.152.2.58) by
+ VE1EUR01FT052.mail.protection.outlook.com (10.152.3.19) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2451.23 via Frontend Transport; Fri, 15 Nov 2019 12:53:19 +0000
+Received: from AM0PR01MB6145.eurprd01.prod.exchangelabs.com
+ ([fe80::3c9c:a018:18dd:3ddf]) by AM0PR01MB6145.eurprd01.prod.exchangelabs.com
+ ([fe80::3c9c:a018:18dd:3ddf%5]) with mapi id 15.20.2451.029; Fri, 15 Nov 2019
+ 12:53:19 +0000
+From: Quentin Bo?ns <qboens@hotmail.fr>
+To: "yncrea.test.projet.M1@gmail.com" <yncrea.test.projet.M1@gmail.com>
+Subject: Harry Potter
+Thread-Topic: Harry Potter
+Thread-Index: AQHVm7Ody7Gf6ysEzEGBAsVVkqP9WQ==
+Date: Fri, 15 Nov 2019 12:53:19 +0000
+Message-ID: 
+ <AM0PR01MB6145AE399146B9F994C7A348BE700@AM0PR01MB6145.eurprd01.prod.exchangelabs.com>
+Accept-Language: fr-FR, en-US
+Content-Language: fr-FR
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-incomingtopheadermarker: 
+ OriginalChecksum:92D47519C4DAF2D370EDE2BAD9DA0C60DBDD99B8B7D098DA5F57867F6B8D9235;UpperCasedChecksum:DECD7BD6FF63E66ABD7B68816B26D9C30D4DDD6E701B55FFB572ABFF738C99FF;SizeAsReceived:6723;Count:42
+x-tmn: [VqJLzpyITiJBKlnAwQoEidReC7Cz2sV0gMes7QlCcMo=]
+x-ms-publictraffictype: Email
+x-incomingheadercount: 42
+x-eopattributedmessage: 0
+x-ms-office365-filtering-correlation-id: 0c2625fa-2aaa-4e90-0a55-08d769caca56
+x-ms-traffictypediagnostic: VE1EUR01HT147:
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: 
+ iW/EDiJHk1dxigy036c3yXa1DNvrnHbUvKnV2/1V9t+mZIDkcF4LgdxROlX7STtu
+x-ms-exchange-transport-forked: True
+Content-Type: multipart/alternative;
+	boundary="_000_AM0PR01MB6145AE399146B9F994C7A348BE700AM0PR01MB6145eurp_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 0c2625fa-2aaa-4e90-0a55-08d769caca56
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-originalarrivaltime: 15 Nov 2019 12:53:19.4661
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: VE1EUR01HT147
+
+--_000_AM0PR01MB6145AE399146B9F994C7A348BE700AM0PR01MB6145eurp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+My movie
+
+
+--_000_AM0PR01MB6145AE399146B9F994C7A348BE700AM0PR01MB6145eurp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" xmlns:m=3D"http://schemas.microsoft.com/of=
+fice/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style>
+</head>
+<body lang=3D"FR" link=3D"blue" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">My movie</p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_AM0PR01MB6145AE399146B9F994C7A348BE700AM0PR01MB6145eurp_--
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+My movie
+
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" xmlns:m=3D"http://schemas.microsoft.com/of=
+fice/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style>
+</head>
+<body lang=3D"FR" link=3D"blue" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">My movie</p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
