@@ -8,7 +8,7 @@ class Email:
         self.lang = """"""
         self.text = """"""
 
-        if re.search("<body>", email_brut) == None:
+        if re.search("<body .*>", email_brut) is None:
             self.type = 'plainText'
         else:
             self.type = 'html'
@@ -30,7 +30,7 @@ class Email:
             header = re.split("<body.*>", email_brut)
             return header[0]
         else :
-            if re.search("Content-Transfer-Encoding:", email_brut) == None :
+            if re.search("Content-Transfer-Encoding:", email_brut) is None :
                 header = re.split("Date:.*\n", email_brut)
                 #header += re.findall("Date:\.*\n", email_brut)[0]
             else :
@@ -50,7 +50,7 @@ class Email:
             txt = re.split("</head>", email_brut)
             return txt[1]
         else :
-            if re.search("Content-Transfer-Encoding:", email_brut) == None :
+            if re.search("Content-Transfer-Encoding:", email_brut) is None :
                 txt = re.split("Date:.*\n", email_brut)
             else :
                 txt = re.split("Content-Transfer-Encoding: .* \n", email_brut)
@@ -68,7 +68,7 @@ class Email:
             txt = re.findall("<p class=\"MsoNormal\">(.+?)<o:p>", email_brut)
             return txt
         else :
-            if re.search("Content-Transfer-Encoding:", email_brut) == None :
+            if re.search("Content-Transfer-Encoding:", email_brut) is None :
                 txt = re.split("Date:.*\n", email_brut)
             else :
                 txt = re.split("Content-Transfer-Encoding: .* \n", email_brut)
@@ -84,7 +84,7 @@ class Email:
                 tt += i
             return tt
         else :
-            if re.search("Content-Transfer-Encoding:", email_brut) == None:
+            if re.search("Content-Transfer-Encoding:", email_brut) is None:
                 txt = re.split("Date:.*\n", email_brut)
             else:
                 txt = re.split("Content-Transfer-Encoding: .* \n", email_brut)
@@ -97,6 +97,7 @@ class Email:
             - return the language
     """
     def find_language(self):
+        """
         if self.type == 'html':
             lang = re.findall('lang\=\"\w*\"', self.email_brut)
             res = """"""
@@ -113,7 +114,8 @@ class Email:
 
         else :
             return None
-
+        """
+        pass
     # get header
     def get_header(self):
         return (self.header+'.')[:-1]
