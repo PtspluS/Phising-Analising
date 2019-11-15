@@ -78,7 +78,7 @@ class Email:
     def extract_text_full(self, txt):
         email_brut = (txt + '.')[:-1]
         if self.type == 'html':
-            txt = re.findall("<p class=\"MsoNormal\">(.+?)<o:p>", email_brut)
+            txt = re.findall("<p .*>(.+?)<.*p>", email_brut)
             tt = """"""
             for i in txt:
                 tt += i
@@ -115,7 +115,7 @@ class Email:
         else :
             return None
         """
-        pass
+        return """"""
     # get header
     def get_header(self):
         return (self.header+'.')[:-1]
