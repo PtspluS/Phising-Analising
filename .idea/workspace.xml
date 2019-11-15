@@ -2,21 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9649e515-bd80-4cba-82c9-cd3c2d7789ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Phising-Analising.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Phising-Analising.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnalyseImage/AnalyseImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/AnalyseImage/AnalyseImage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/AnalyseSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/AnalyseSourceAdresse/AnalyseSource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/testAnalyse.py" beforeDir="false" afterPath="$PROJECT_DIR$/AnalyseSourceAdresse/testAnalyse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Detection/detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Detection/detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Detector/mails/BodyExtract.py" beforeDir="false" afterPath="$PROJECT_DIR$/Detector/mails/BodyExtract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extraction/Extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/Extraction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extraction/Partition.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/Partition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extraction/TestExtraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/TestExtraction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extraction/testExtractBody.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extraction/testExtractBody.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/AnalyseSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/AnalyseSource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Extraction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Partition.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Partition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/scriptAnalyseSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/scriptAnalyseSource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseImage/AnalyseImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnalyseImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/AnalyseSource.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/testAnalyse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/wordlist/anglais-divers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/wordlist/anglais-divers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/wordlist/entreprises.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/wordlist/entreprises.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/wordlist/extensions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/wordlist/extensions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/wordlist/francais-prenoms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/wordlist/francais-prenoms.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalyseSourceAdresse/wordlist/words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/wordlist/words.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Detection/detector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Detector/mails/AnalyseBody.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Detector/mails/BodyExtract.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Email.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Email_extractor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/Extraction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/Partition.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/TestExtraction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/mailsTest/email.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/mailsTest/email0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/mailsTest/email1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/mailsTest/email2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/mailsTest/email3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extraction/testExtractBody.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Link_analyser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mail_box.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/AnalyseSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnalyseSource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Extraction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Partition.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/mailsTest/email.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/mailsTest/email0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/mailsTest/email1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/mailsTest/email2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/mailsTest/email3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/scriptAnalyseSource.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/wordlist/anglais-divers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/wordlist/entreprises.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/wordlist/extensions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/wordlist/francais-prenoms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/wordlist/words.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/essai_sauv_email" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clustering.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Email_extractor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grammar_annalisis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grammar_annalisis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Link_analyser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Link_analyser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mail_box.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/email1.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +78,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\User\Documents\ISEN\Projet\Phising-Analising\src" />
+      <recent name="E:\User\Documents\ISEN\Projet\Phising-Analising\src\Test" />
+      <recent name="E:\User\Documents\ISEN\Projet\Phising-Analising\data" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -56,7 +97,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Neural_Network">
+  <component name="RunManager" selected="Python.AnalyseSource">
+    <configuration name="AnalyseSource" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Phising-Analising" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/AnalyseSource.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Clustering" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Phising-Analising" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,28 +156,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Email.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Email_extractor" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Phising-Analising" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Email_extractor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.AnalyseSource" />
         <item itemvalue="Python.Neural_Network" />
         <item itemvalue="Python.Grammar_annalisis" />
         <item itemvalue="Python.Clustering" />
         <item itemvalue="Python.Email" />
-        <item itemvalue="Python.Email_extractor" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +239,9 @@
       <workItem from="1573640283891" duration="5575000" />
       <workItem from="1573654699907" duration="6414000" />
       <workItem from="1573727195594" duration="6701000" />
+      <workItem from="1573804660563" duration="916000" />
+      <workItem from="1573808150156" duration="1202000" />
+      <workItem from="1573819527570" duration="1880000" />
     </task>
     <task id="LOCAL-00001" summary="create functions to analyse the link">
       <created>1571244805650</created>
@@ -262,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573740666346</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="PAS DE ; EN FIN DE LIGNE EN PYTHON">
+      <created>1573749276895</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573749276895</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,34 +343,20 @@
     <MESSAGE value="annalise frequency misspell" />
     <MESSAGE value="Email getter return now copy" />
     <MESSAGE value="object IA created" />
-    <option name="LAST_COMMIT_MESSAGE" value="object IA created" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/Clustering.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/Email.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="PAS DE ; EN FIN DE LIGNE EN PYTHON" />
+    <option name="LAST_COMMIT_MESSAGE" value="PAS DE ; EN FIN DE LIGNE EN PYTHON" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail_box.coverage" NAME="Mail_box Coverage Results" MODIFIED="1571233684915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Clustering.coverage" NAME="Clustering Coverage Results" MODIFIED="1573727555196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail_incoming.coverage" NAME="Mail_incoming Coverage Results" MODIFIED="1571141427648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Email_extractor.coverage" NAME="Email_extractor Coverage Results" MODIFIED="1573560444469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Phising_Analising$Neural_Network.coverage" NAME="Neural_Network Coverage Results" MODIFIED="1573740024442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Phising_Analising$Neural_Network.coverage" NAME="Neural_Network Coverage Results" MODIFIED="1573821345623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail.coverage" NAME="Mail Coverage Results" MODIFIED="1571149577445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Link_analyser.coverage" NAME="Link_analyser Coverage Results" MODIFIED="1571329102263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Grammar_annalisis.coverage" NAME="Grammar_annalisis Coverage Results" MODIFIED="1573729876724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Email.coverage" NAME="Email Coverage Results" MODIFIED="1573655216083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Phising_Analising$AnalyseSource.coverage" NAME="AnalyseSource Coverage Results" MODIFIED="1573821360941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$email_parser.coverage" NAME="email_parser Coverage Results" MODIFIED="1571131120778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Envoi_email.coverage" NAME="Envoi_email Coverage Results" MODIFIED="1571131198205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
