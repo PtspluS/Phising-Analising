@@ -42,14 +42,15 @@ while True:
     if(new_mes_nb > old_mes_nb):
         print("\n---NOUVEAU MESSAGE : %i---"%x)
         latest_email_uid = data[0].split()[new_mes_nb - 1]
-        print(latest_email_uid)
+        
         result, email_data = mail.uid('fetch', latest_email_uid, '(RFC822)')
 
-
+        
         raw_email = email_data[0][1]
         
         raw_email_string = raw_email.decode('utf-8')
         email_message = email.message_from_string(raw_email_string)
+        
         for part in email_message.walk():
             save_string = r"email" + str(x) + ".txt"
             myfile = open(save_string, 'a')
@@ -71,9 +72,8 @@ while True:
         mail.select(cible_dossier)
 
         result, data = mail.uid('search', None, "ALL")
-        print(data[0])
-        latest_email_uid = data[0].split()[- 1]
-        sleep(15)       
+        
+        latest_email_uid = data[0].split()[- 1]       
 
         sortie_traitement = randint(1,3)
 
@@ -82,21 +82,21 @@ while True:
         if(sortie_traitement == 3):
             result_move, err_mes = mail.uid('move',latest_email_uid,"sur")
             if(result_move =='OK'):
-                print("Mail", str(latest_email_uid), "déplacé dans sur")
+                print("Mail déplacé dans sur")
             else:
                 print(err_mes)
 
         elif(sortie_traitement == 2):
             result_move, err_mes = mail.uid('move',latest_email_uid,"moyen")
             if(result_move =='OK'):
-                print("Mail", str(latest_email_uid), "déplacé dans moyen")
+                print("Mail déplacé dans moyen")
             else:
                 print(err_mes)
 
         else:
             result_move, err_mes = mail.uid('move',latest_email_uid,"danger")
             if(result_move =='OK'):
-                print("Mail", str(latest_email_uid), "déplacé dans danger")
+                print("Mail déplacé dans danger")
             else:
                 print(err_mes)
 
