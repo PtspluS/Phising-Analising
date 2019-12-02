@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9649e515-bd80-4cba-82c9-cd3c2d7789ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Email.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Neural_Network.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Neural_Network.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +196,9 @@
       <workItem from="1573808150156" duration="1202000" />
       <workItem from="1573819527570" duration="5611000" />
       <workItem from="1573826226177" duration="21000" />
-      <workItem from="1573826566220" duration="693000" />
+      <workItem from="1573826566220" duration="765000" />
+      <workItem from="1573827807230" duration="51000" />
+      <workItem from="1575283626557" duration="210000" />
     </task>
     <task id="LOCAL-00001" summary="create functions to analyse the link">
       <created>1571244805650</created>
@@ -283,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573826140739</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="patch 0.2 Email object">
+      <created>1573827306759</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1573827306759</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +324,8 @@
     <MESSAGE value="PAS DE ; EN FIN DE LIGNE EN PYTHON" />
     <MESSAGE value="all code in src and all data in data" />
     <MESSAGE value="patch Email object" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch Email object" />
+    <MESSAGE value="patch 0.2 Email object" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch 0.2 Email object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

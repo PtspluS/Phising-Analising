@@ -1,5 +1,5 @@
 from keras.models import Sequential, load_model
-from keras.layers import Dense
+from keras.layers import Dense, Dropout
 from keras.optimizers import Adam
 import matplotlib.pyplot as plt
 
@@ -15,9 +15,13 @@ class Network:
             self.model = Sequential()
             self.model.add(Dense(imput_dim, input_dim = imput_dim, kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
             self.model.add(Dense(imput_dim*4, kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
+            self.model.add(Dropout(0.5))
             self.model.add(Dense(imput_dim*2, kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
+            self.model.add(Dropout(0.5))
             self.model.add(Dense(imput_dim, kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
+            self.model.add(Dropout(0.5))
             self.model.add(Dense(int(imput_dim/2), kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
+            self.model.add(Dropout(0.5))
             self.model.add(Dense(1, kernel_initializer='random_normal', bias_initializer='ones', activation='sigmoid'))
 
             self.model.compile(loss='mean_squared_error', optimizer=opt, metric=['accuracy'])
