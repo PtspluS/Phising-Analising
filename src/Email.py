@@ -1,21 +1,19 @@
+import email
+from email.parser import Parser
+from email.policy import default
 import re
 
 class Email:
-    def __init__(self, email_brut = """"""):
-        self.email_brut = email_brut
+    def __init__(self, raw = ""):
+        self.raw = Parser(policy=default).parse(raw)
         self.header = """"""
         self.body = """"""
         self.lang = """"""
         self.text = """"""
 
-        if re.search("<body .*>", email_brut) is None:
-            self.type = 'plainText'
-        else:
-            self.type = 'html'
-
-        self.header = self.extract_header(self.email_brut)
-        self.body = self.extract_body(self.email_brut)
-        self.text = self.extract_text_full(self.email_brut)
+        self.header = self.extract_header(self.raw)
+        self.body = self.extract_body(self.raw)
+        self.text = self.extract_text_full(self.raw)
         self.lang = self.find_language()
 
     '''
@@ -24,19 +22,16 @@ class Email:
         return : 
             - return the header (str)
     '''
-    def extract_header(self, txt):
-        email_brut = (txt+'.')[:-1]
-        if self.type == 'html' :
-            header = re.split("<body.*>", email_brut)
-            return header[0]
-        else :
-            if re.search("Content-Transfer-Encoding:", email_brut) is None :
-                header = re.split("Date:.*\n", email_brut)
-                #header += re.findall("Date:\.*\n", email_brut)[0]
-            else :
-                header = re.split("Content-Transfer-Encoding: .* \n", email_brut)
+    def extract_header(self):
+        parser = email.parser.HeaderParser()
+        headers = parser.parsestr(self.raw.as_string())
 
-            return header[0]
+        head = ""
+
+        for h in headers.items():
+            head += h[0]+' : '+h[1]+'\n'
+
+        return head
 
     '''
     extract_body()
@@ -45,50 +40,40 @@ class Email:
             - return the body (str)
     '''
     def extract_body(self, txt):
-        email_brut = (txt + '.')[:-1]
-        if self.type == 'html':
-            txt = re.split("</head>", email_brut)
-            return txt[1]
-        else :
-            if re.search("Content-Transfer-Encoding:", email_brut) is None :
-                txt = re.split("Date:.*\n", email_brut)
-            else :
-                txt = re.split("Content-Transfer-Encoding: .* \n", email_brut)
-            return txt[2]
+        b = self.raw
+
+        return b.get_payload()
+
 
     '''
-    extract_header()
+    extract_txt()
         extract all the txt in the email
         return : 
             - return tab of all txt
-    '''
+    
     def extract_txt(self, txt):
-        email_brut = (txt + '.')[:-1]
-        if self.type == 'html':
-            txt = re.findall("<p class=\"MsoNormal\">(.+?)<o:p>", email_brut)
-            return txt
-        else :
-            if re.search("Content-Transfer-Encoding:", email_brut) is None :
-                txt = re.split("Date:.*\n", email_brut)
-            else :
-                txt = re.split("Content-Transfer-Encoding: .* \n", email_brut)
-            return txt[2]
-
+        pass
+    '''
     # same as before but only return str
     def extract_text_full(self, txt):
-        email_brut = (txt + '.')[:-1]
-        if self.type == 'html':
-            txt = re.findall("<p .*>(.+?)<.*p>", email_brut)
-            tt = """"""
-            for i in txt:
-                tt += i
-            return tt
-        else :
-            if re.search("Content-Transfer-Encoding:", email_brut) is None:
-                txt = re.split("Date:.*\n", email_brut)
+        b = self.raw
+        body = ""
+
+        if b.is_multipart():
+            for part in b.walk():
+                ctype = part.get_content_type()
+                cdispo = str(part.get('Content-Disposition'))
+
+                # skip any text/plain (txt) attachments
+                if ctype == 'text/plain' and 'attachment' not in cdispo:
+                    body = part.get_payload(decode=True)  # decode
+                    break
+            # not multipart - i.e. plain text, no attachments, keeping fingers crossed
             else:
-                txt = re.split("Content-Transfer-Encoding: .* \n", email_brut)
-            return txt[2]
+                body = b.get_payload(decode=True)
+
+        return body.decode("utf-8")
+
 
     """
     find_language()
@@ -97,25 +82,11 @@ class Email:
             - return the language
     """
     def find_language(self):
-        """
-        if self.type == 'html':
-            lang = re.findall('lang\=\"\w*\"', self.email_brut)
-            res = """"""
-            inBracket = False
-
-            for s in lang[0]:
-                if s == '"' or s == "'":
-                    inBracket = not inBracket
-                    continue
-                if inBracket:
-                    res += s
-
-            return res
-
-        else :
-            return None
-        """
-        return """"""
+        b = self.raw
+        if b.is_multipart():
+            return b['Content-Language']
+        else:
+            return False
     # get header
     def get_header(self):
         return (self.header+'.')[:-1]
