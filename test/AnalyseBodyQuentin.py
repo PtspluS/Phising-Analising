@@ -61,11 +61,13 @@ class LemmaCountVectorizer(CountVectorizer):
 
 
 def print_top_words(model, feature_names, n_top_words):
+    j = 1
     for topic_idx, topic in enumerate(model.components_):
-        print("Topic #%d:" % topic_idx)
+        j+=1
+        print("Topic n°", topic_idx,":")
         print(" ".join([feature_names[i]
                         for i in topic.argsort()[:-n_top_words - 1:-1]]))
-    print()
+    print(j)
 
 
 punctuations = string.punctuation
@@ -153,7 +155,8 @@ def run():
     tf_vectorizer = LemmaCountVectorizer(stop_words='english',
                                          decode_error='ignore')
     tf = tf_vectorizer.fit_transform(text)
-    
+    print(tf)
+    return 0
     nb_components = 10
     
     lda = LatentDirichletAllocation(n_components=nb_components, max_iter=5,
@@ -163,7 +166,7 @@ def run():
 
     lda.fit(tf)
 
-    
+    """
     LatentDirichletAllocation(batch_size=128, doc_topic_prior=None,
                           evaluate_every=-1, learning_decay=0.7,
                           learning_method='online', learning_offset=50.0,
@@ -172,20 +175,26 @@ def run():
                           perp_tol=0.1, random_state=0, topic_word_prior=None,
                           total_samples=1000000.0, verbose=0)
 
-    
+    """
     n_top_words = 5
     #print("\nTopics in LDA model: ")
+
+    
+    
     tf_feature_names = tf_vectorizer.get_feature_names()
+    print(len(tf_feature_names))
+        
     print_top_words(lda, tf_feature_names, n_top_words)
 
     text =[ """
     The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents. We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far. The sciences, each straining in its own direction, have hitherto harmed us little; but some day the piecing together of dissociated knowledge will open up such terrifying vistas of reality, and of our frightful position therein, that we shall either go mad from the revelation or flee from the deadly light into the peace and safety of a new dark age.
     """]
 
-
-    essai = tf_vectorizer.fit_transform(text)
-    print(essai)
-    #print(lda.score(essai))
+    
+    
+    """for i in top_topic:
+        print(i)
+        print(tf_vectorizer.get_feature_names()[i])"""
     
     
     """
