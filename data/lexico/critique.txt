@@ -1,1 +1,1 @@
-password;account;login;$;€;dollar;free;activity;log;now;suspicious;hours;protect;security;information;verification
+password;account;login;$;€;dollar;free;activity;log;now;suspicious;hours;protect;security;information;verification;price;discount;
