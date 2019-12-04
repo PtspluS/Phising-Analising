@@ -25,7 +25,7 @@
   <component name="ProjectId" id="1SHufcwUPZSrUa52Ji1rtcfKZco" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Semestre 1/IA/eval/game" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AnalyseLexico.py" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -51,8 +51,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Trainer">
-    <configuration name="AnalyseSource" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.AnalyseLexico">
+    <configuration name="AnalyseLexico" type="PythonConfigurationType" factoryName="Python">
+      <module name="Phising-Analising" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/AnalyseLexico.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AnalyseSource" type="PythonConfigurationType" factoryName="Python">
       <module name="Phising-Analising" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,32 +162,15 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Trainer" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Phising-Analising" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Trainer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python.AnalyseLexico" />
+      <item itemvalue="Python.AnalyseSource" />
+      <item itemvalue="Python.Clustering" />
+      <item itemvalue="Python.Grammar_annalisis" />
+      <item itemvalue="Python.Neural_Network" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Trainer" />
-        <item itemvalue="Python.AnalyseSource" />
         <item itemvalue="Python.Neural_Network" />
         <item itemvalue="Python.Grammar_annalisis" />
         <item itemvalue="Python.Clustering" />
