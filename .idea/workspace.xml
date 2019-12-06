@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9649e515-bd80-4cba-82c9-cd3c2d7789ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Analyser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AnalyseImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnalyseImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AnalyseSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnalyseSource.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Email.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grammar_annalisis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grammar_annalisis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Link_analyser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Link_analyser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +205,9 @@
       <workItem from="1573826566220" duration="765000" />
       <workItem from="1573827807230" duration="51000" />
       <workItem from="1575283626557" duration="18051000" />
-      <workItem from="1575365237667" duration="6232000" />
+      <workItem from="1575365237667" duration="6284000" />
+      <workItem from="1575455967571" duration="12214000" />
+      <workItem from="1575627090315" duration="106000" />
     </task>
     <task id="LOCAL-00001" summary="create functions to analyse the link">
       <created>1571244805650</created>
@@ -299,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575283856871</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Email object finish">
+      <created>1575385609009</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1575385609010</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,23 +349,29 @@
     <MESSAGE value="patch Email object" />
     <MESSAGE value="patch 0.2 Email object" />
     <MESSAGE value="add dropout to protect agains overfit" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dropout to protect agains overfit" />
+    <MESSAGE value="Email object finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Email object finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/Trainer.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="1" />
+          <line>29</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/AnalyseSource.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/Analyser.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="head" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Phising_Analising$Clustering.coverage" NAME="Clustering Coverage Results" MODIFIED="1573727555196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
@@ -363,9 +384,9 @@
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail_box.coverage" NAME="Mail_box Coverage Results" MODIFIED="1571233684915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Email_extractor.coverage" NAME="Email_extractor Coverage Results" MODIFIED="1573560444469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Mail.coverage" NAME="Mail Coverage Results" MODIFIED="1571149577445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Phising_Analising$Trainer.coverage" NAME="Trainer Coverage Results" MODIFIED="1575284811958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Phising_Analising$Trainer.coverage" NAME="Trainer Coverage Results" MODIFIED="1575477922324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$Email.coverage" NAME="Email Coverage Results" MODIFIED="1573655216083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Phising_Analising$test.coverage" NAME="test Coverage Results" MODIFIED="1575385534019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Phising_Analising$test.coverage" NAME="test Coverage Results" MODIFIED="1575627262424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Phising_Analising$email_parser.coverage" NAME="email_parser Coverage Results" MODIFIED="1571131120778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

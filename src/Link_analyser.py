@@ -138,6 +138,8 @@ analyse_link_from(links : [str])
         - average of links which point only on one think
 '''
 def analyse_link_from(links, all_concordance = False):
+    if len(links) == 0:
+        return 1
     annalyse = {}
     for l in links:
         an = analyse_link(l)

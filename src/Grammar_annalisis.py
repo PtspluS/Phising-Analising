@@ -2,6 +2,11 @@ from spellchecker import SpellChecker
 import nltk
 
 def error_grammar_frequency_en(text):
+    """
+
+    :param text: tout le texte du mail
+    :return:
+    """
 
     spell = SpellChecker()
 

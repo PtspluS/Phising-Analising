@@ -3,6 +3,7 @@ import numpy as np
 from src.Neural_Network import Network
 from src.Email import Email
 import os
+import email
 
 # datas ################################################################################################################
 path_correct = "./data/Spam_mail/mail_convert/"
@@ -22,5 +23,8 @@ target_data = []
 
 # test #################################################################################################################
 f = open("email1.txt", 'r')
-e = Email(f.read())
-print(e.get_language())
+msg = email.message_from_file(f)
+f.close()
+e = Email(msg)
+
+print(e.get_sender())

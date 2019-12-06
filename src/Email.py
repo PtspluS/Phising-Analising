@@ -1,19 +1,23 @@
 import email
-from email.parser import Parser
-from email.policy import default
 import re
+
 
 class Email:
     def __init__(self, raw = ""):
-        self.raw = Parser(policy=default).parse(raw)
-        self.header = """"""
-        self.body = """"""
-        self.lang = """"""
-        self.text = """"""
+        self.raw = raw
 
-        self.header = self.extract_header(self.raw)
-        self.body = self.extract_body(self.raw)
-        self.text = self.extract_text_full(self.raw)
+        parser = email.parser.HeaderParser()
+        headers = parser.parsestr(self.raw.as_string())
+        content = re.split(";", headers['Content-Type'])[0]
+
+        if content == "text/html" or content == "multipart/alternative":
+            self.type = 'html'
+        elif content == "text/plain":
+            self.type = 'text'
+
+        self.header = self.extract_header()
+        self.body = self.extract_body()
+        self.text = self.extract_text_full()
         self.lang = self.find_language()
 
     '''
@@ -39,7 +43,7 @@ class Email:
         return :
             - return the body (str)
     '''
-    def extract_body(self, txt):
+    def extract_body(self):
         b = self.raw
 
         return b.get_payload()
@@ -55,7 +59,7 @@ class Email:
         pass
     '''
     # same as before but only return str
-    def extract_text_full(self, txt):
+    def extract_text_full(self):
         b = self.raw
         body = ""
 
@@ -102,4 +106,16 @@ class Email:
     # get language
     def get_language(self):
         return (self.lang+'.')[:-1]
+
+    # get all the links
+    def get_links(self):
+        url = self.text
+        urls = re.findall('https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+', url)
+        return urls
+
+    # get the sender
+    def get_sender(self):
+        send = self.raw._headers[17][1]+'.'[:-1]
+        send = re.split('<', send[:-1])
+        return send
 

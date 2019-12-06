@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-
 import re
 
 
@@ -215,6 +213,12 @@ def analyseSignification(listeAdresseGauche):
 
 
 def analyse(nom, adresse):
+    """
+
+    :param nom: nom de l'envoyeur
+    :param adresse: adresse email de l'envoyeur
+    :return:
+    """
 
     listeAdresse = creationListeMotsAdresse(adresse, "../data/wordlist/francais-prenoms.txt") + creationListeMotsAdresse(adresse, "../data/wordlist/words.txt") + creationListeMotsAdresse(adresse, "../data/wordlist/entreprises.txt")
     listeNom = creationListeMotsNom(nom, "../data/wordlist/francais-prenoms.txt") + creationListeMotsNom(nom, "../data/wordlist/words.txt") + creationListeMotsAdresse(adresse, "../data/wordlist/entreprises.txt")

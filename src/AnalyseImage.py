@@ -7,6 +7,12 @@ La fonction analyseLienImage retourne un nombre entre 0 et 1
 
 
 def analyseLienImage(tabLien, nom):
+    """
+
+    :param tabLien: tableau avec tous les liens dans le mail
+    :param nom: nom de l'envoyeur
+    :return: pourcentage de retour
+    """
     
     ratio = 0
     nombreLiens = len(tabLien)
