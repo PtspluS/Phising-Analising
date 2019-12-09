@@ -1,3 +1,5 @@
+#install goto-statement
+from goto import with_goto
 
 import sys
 from threading import Thread, RLock
@@ -24,6 +26,7 @@ class checkMail(Thread):
         self.new_mes_nb = new_mes_nb
         
     def run(self):
+
         
         try:
             print("\n---NOUVEAU MESSAGE : %i---"%self.x)
@@ -92,7 +95,7 @@ class checkMail(Thread):
                         print(err_mes)
 
                 
-                
+                self.mail.logout()
                 print("Analyse effectuée")
                 self.join()
         except KeyboardInterrupt:
@@ -111,46 +114,66 @@ def efface_old_mail():
         else:
           print("Fichiers supprimés")
           arret = True
-
+@with_goto
 def run():
-    global arret
-    mail = imaplib.IMAP4_SSL('imap.gmail.com')
-    mail.login('yncrea.test.projet.M1@gmail.com', 'ujikolpm')
-    old_mes_nb = -1
-    x = 1
-    ident = 1
-    list_thread = list()
-    efface_old_mail()
-    while True:
-        
-        
-        
-        mail.list() 
-        mail.select('inbox')
-        
+    
+    label.start
+    print("start")
+    try:
+        mail = imaplib.IMAP4_SSL('imap.gmail.com')
+        mail.login('yncrea.test.projet.M1@gmail.com', 'ujikolpm')
+        old_mes_nb = -1
+        x = 1
+        ident = 1
+        list_thread = list()
+        efface_old_mail()
 
-        result, data = mail.uid('search', None, "ALL")
         
-        i = len(data[0].split())
-        new_mes_nb = i
+        while True:
+            mail.list() 
+            mail.select('inbox')
 
-        if(old_mes_nb == -1):
-            old_mes_nb = new_mes_nb
-        
 
-        if(new_mes_nb > old_mes_nb):
+            if len(threading.enumerate()) > 2:
+                print(len(threading.enumerate()) - 2," thread(s) actif(s)")
+
+            result, data = mail.uid('search', None, "ALL")
             
-            list_thread.append(checkMail(ident, x, data, new_mes_nb))
-            list_thread[len(list_thread) - 1].setDaemon(True)
-            list_thread[len(list_thread) - 1].start()
-            
-            ident += 1
-            x += 1
-            old_mes_nb = new_mes_nb
-            
-        elif(new_mes_nb < old_mes_nb):
-            old_mes_nb = new_mes_nb
+            i = len(data[0].split())
+            new_mes_nb = i
 
-run()
+            if(old_mes_nb == -1):
+                old_mes_nb = new_mes_nb
+            
 
+            if(new_mes_nb > old_mes_nb):
+                
+                list_thread.append(checkMail(ident, x, data, new_mes_nb))
+                list_thread[len(list_thread) - 1].setDaemon(True)
+                list_thread[len(list_thread) - 1].start()
+                
+                ident += 1
+                x += 1
+                old_mes_nb = new_mes_nb
+                
+            elif(new_mes_nb < old_mes_nb):
+                old_mes_nb = new_mes_nb
+    except TimeoutError:
+        goto.start
+    except KeyboardInterrupt:
+        goto.end
+
+    label.end
+    mail.logout()
+    print("Good Bye")
+#run()
+
+
+import requests
+def essai():
+    r = requests.get('https://www.facebook.com/')
+    print(r)
+    print(r.raw._original_response.fp)
+    
+essai()
 
