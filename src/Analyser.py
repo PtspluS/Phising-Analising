@@ -9,7 +9,7 @@ def mark_email(email):
     sender_name = email.get_sender()[0]
     sender_mail = email.get_sender()[1]
     links = email.get_links()
-    language = email.get_language()
+#    language = email.get_language()
     txt = email.get_text()
 
     marks = []

@@ -24,8 +24,8 @@ analyse_link(link : str)
         - ratio of the link who point on the same information
 '''
 def analyse_link(link):
-    starter = re.findall("(https|http)", link)[0]+':/'
-    regex_path = re.findall("\/?[\w\.\-]+\/", link)
+    starter = re.findall("https?", link)[0]+':/'
+    regex_path = re.findall("\/[\w\.\-]+\/?", link)
 
     weight = 1/len(regex_path)           # use to determine the concordance
 
@@ -109,6 +109,7 @@ get_ip_from(link:str)
 def get_ip_from(link):
     try:
         with requests.get(link, stream=True) as r:
+            # renvoie l'ip du lien
             ip = r.raw._original_response.fp.raw._sock.getpeername()[0]
             return ip
     except Exception as e:

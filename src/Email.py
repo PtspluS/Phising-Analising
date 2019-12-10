@@ -1,25 +1,38 @@
 import email
 import re
+import mailparser
 
 
 class Email:
     def __init__(self, raw = ""):
         self.raw = raw
 
-        parser = email.parser.HeaderParser()
-        headers = parser.parsestr(self.raw.as_string())
-        content = re.split(";", headers['Content-Type'])[0]
+        """
+        try:
+            parser = email.parser.HeaderParser()
+            headers = parser.parsestr(self.raw.as_string())
+            content = re.split(";", headers['Content-Type'])[0]
 
-        if content == "text/html" or content == "multipart/alternative":
-            self.type = 'html'
-        elif content == "text/plain":
+            if content == "text/html" or content == "multipart/alternative":
+                self.type = 'html'
+            else:
+                self.type = 'text'
+
+        except:
             self.type = 'text'
 
         self.header = self.extract_header()
         self.body = self.extract_body()
         self.text = self.extract_text_full()
         self.lang = self.find_language()
-
+        """
+        try:
+            mail = mailparser.parse_from_file_obj(raw)
+            self.header = mail.headers
+            self.body = mail.body
+            self.text = mail.message_as_string
+        except Exception as e:
+            print(e)
     '''
     extract_header()
         extract the header part of the email
@@ -72,11 +85,18 @@ class Email:
                 if ctype == 'text/plain' and 'attachment' not in cdispo:
                     body = part.get_payload(decode=True)  # decode
                     break
-            # not multipart - i.e. plain text, no attachments, keeping fingers crossed
-            else:
-                body = b.get_payload(decode=True)
+        # not multipart - i.e. plain text, no attachments, keeping fingers crossed
+        else:
+            body = b.get_payload(decode=True)
 
-        return body.decode("utf-8")
+        try:
+            body = body.decode('utf-8')
+        except:
+            try:
+                body = body.decode('windows-1252')
+            except:
+                body = str(body)
+        return body
 
 
     """
@@ -90,7 +110,7 @@ class Email:
         if b.is_multipart():
             return b['Content-Language']
         else:
-            return False
+            return 'EN-en'
     # get header
     def get_header(self):
         return (self.header+'.')[:-1]
@@ -105,6 +125,8 @@ class Email:
 
     # get language
     def get_language(self):
+        if self.lang is None:
+            return 'EN-en'
         return (self.lang+'.')[:-1]
 
     # get all the links
@@ -115,7 +137,7 @@ class Email:
 
     # get the sender
     def get_sender(self):
-        send = self.raw._headers[17][1]+'.'[:-1]
+        send = self.header['From']
         send = re.split('<', send[:-1])
         return send
 
