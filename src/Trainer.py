@@ -3,8 +3,7 @@ import numpy as np
 from src.Neural_Network import Network
 from src.Email import Email
 import os
-import email
-import pymongo
+from src.save import save
 from src.Analyser import mark_email
 
 # datas ################################################################################################################
@@ -21,9 +20,7 @@ target_data = []
 def load(path):
     mails = []
     for f in os.listdir(path):
-        content = open(os.path.join(path, f), 'r')
-#        msg = email.message_from_file(content)
-        mail = Email(content)
+        mail = Email(os.path.join(path, f))
         mails.append(mail)
 
     return mails
@@ -35,10 +32,12 @@ incorrect_email = load(path_incorrect)
 for mail in correct_email:
     training_data.append(mark_email(mail))
     target_data.append(1)
+    save(mail, mark_email(mail), grade=1)
 
 for mail in incorrect_email:
     training_data.append(mark_email(mail))
     target_data.append(0)
+    save(mail, mark_email(mail), grade=0)
 
 # run training #########################################################################################################
 bot = Network(create=True)

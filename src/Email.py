@@ -24,13 +24,14 @@ class Email:
         self.header = self.extract_header()
         self.body = self.extract_body()
         self.text = self.extract_text_full()
-        self.lang = self.find_language()
         """
         try:
-            mail = mailparser.parse_from_file_obj(raw)
+            mail = mailparser.parse_from_file(raw)
             self.header = mail.headers
             self.body = mail.body
-            self.text = mail.message_as_string
+            self.text = mail.body
+            self.lang = self.find_language()
+            self.mail = mail.mail_partial
         except Exception as e:
             print(e)
     '''
@@ -106,11 +107,7 @@ class Email:
             - return the language
     """
     def find_language(self):
-        b = self.raw
-        if b.is_multipart():
-            return b['Content-Language']
-        else:
-            return 'EN-en'
+        return 'EN-en'
     # get header
     def get_header(self):
         return (self.header+'.')[:-1]
@@ -137,7 +134,11 @@ class Email:
 
     # get the sender
     def get_sender(self):
-        send = self.header['From']
-        send = re.split('<', send[:-1])
-        return send
-
+        try:
+            return self.mail['from']
+        except Exception as e:
+            print(e)
+            for i in range(len(self.mail)):
+                if self.mail[i] == 'from':
+                    return self.mail[i]
+            return [['a', 'a']]

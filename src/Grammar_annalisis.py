@@ -17,7 +17,10 @@ def error_grammar_frequency_en(text):
     misspelled = spell.unknown(tokens)
 
     # frequency of the word who have are misspelled
-    freq = len(misspelled)/size_txt
+    try:
+        freq = len(misspelled)/size_txt
+    except:
+        freq = 0.5
 
     # transform in percent
     return freq*100

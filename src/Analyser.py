@@ -6,17 +6,17 @@ from src.Link_analyser import analyse_link_from
 
 
 def mark_email(email):
-    sender_name = email.get_sender()[0]
-    sender_mail = email.get_sender()[1]
+    sender_name = email.get_sender()[0][0]
+    sender_mail = email.get_sender()[0][1]
     links = email.get_links()
-#    language = email.get_language()
+    language = email.get_language()
     txt = email.get_text()
 
     marks = []
 
     marks.append(analyseLienImage(links, sender_name))
 #    marks.append(analyse(sender_name, sender_mail))
-    marks.append(analyse_link_from(links))
+#    marks.append(analyse_link_from(links))
 
     if language != 'FR-fr':
         marks.append(error_grammar_frequency_en(txt))
