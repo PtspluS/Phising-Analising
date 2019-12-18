@@ -161,7 +161,7 @@ def analyseComparaisonNomAdresse(nom, adresse):
 
 def analyseExtention(extention, listeNom):
     
-    mon_fichier = open("wordlist/extensions.txt", encoding="utf8")
+    mon_fichier = open("../data/wordlist/extensions.txt", encoding="utf8")
     listeExtensions = mon_fichier.read()
     mon_fichier.close()
     comparaisonExtention = 0
@@ -230,4 +230,5 @@ def analyse(nom, adresse):
         
                    
     return [extentionAnalyse, comparaisonAnalyse, significationAnalyse]
+
 
