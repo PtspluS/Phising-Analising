@@ -109,7 +109,7 @@ def run():
                 else:
                     result_move, err_mes = mail.uid('move', latest_email_uid, "danger")
                     if (result_move == 'OK'):
-                        print("Mail déplacé dans danger")
+                        print("Mail éplacé dans danger")
                     else:
                         print(err_mes)
 
