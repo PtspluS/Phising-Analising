@@ -1,0 +1,249 @@
+Essai_mail
+Quentin Bo?ns <qboens@hotmail.fr>
+Lun 14/10/2019 10:06
+
+Coucou
+
+ 
+Received: from PR2P264MB0016.FRAP264.PROD.OUTLOOK.COM (2603:10a6:102::33) by
+
+ PR0P264MB0091.FRAP264.PROD.OUTLOOK.COM with HTTPS via
+
+ PR1PR01CA0020.EURPRD01.PROD.EXCHANGELABS.COM; Mon, 14 Oct 2019 08:06:06 +0000
+
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=pass;
+
+ b=IbJLmu5ljHFYL14VWWuwOIhVsngFW2K6LvAOk3QDbHbv5Oo3MUrwTpPSQUY+CPW80D39ctWcUyRqfA5JvxSVjr1QdDJmsgfWwx59L9mjAOjFrIgqp/MdsvOzscXeR2eSUNZM4JRpnEX8BhZpM6jMEmbswlWs68KGBAtf92STOPM2H4bsBIsFrQzLfYJn3kWrQ3Bm0o2IeTufmDv0f4u4G5oYVlnOJA68fqMRylkDW/+2rWwwQyGl3XVVH0EJJfgAj5tVsYwrZv2cK4roGGRn6JzeHzx6F10bUgqNJkw6O+JyanNSUWTcM+dyNr/qymhw50Lw8We8QxAtERnI9nwqtw==
+
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+
+ s=arcselector9901;
+
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+
+ bh=FMK0RPUW+sYl8/+U/QCvSv6TYZix2qN68V/3//+Thvs=;
+
+ b=O5tPRTD69dAQzFC1MARRPbGlD6dC3VZpRGH7oVm4UcWViSIYwkodZdJ1NXxR8X+ZKLhSbNVsdHg+nKkQPL2CZL35REP7jmrpfENMDnYr1zJgINGdK+xjH9zjxsWWKdemt3Ua+nZLXUc3tduTvPIjyNdl+5NhJqAl6+H6acAsihLTGp+s7FqiIngaLkBRLHpUNy8LPn6mC0CVz/hXMxESfD9ReTV4KiyzPnDZx20loTmk/GeRZEPzXDMTI4YU3SvJxqz5o0M/ldNqyI83UOobnTGBDBdlXOjkg3gIHhts/d/FoDzddyVtp0JbOgaxPkFa1fBt1xGee6QyNb2eaidlyA==
+
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+
+ 40.92.71.92) smtp.rcpttodomain=isen.yncrea.fr smtp.mailfrom=hotmail.fr;
+
+ dmarc=pass (p=none sp=none pct=100) action=none header.from=hotmail.fr;
+
+ dkim=none (message not signed); arc=pass (0 oda=0 ltdi=1)
+
+Received: from PR0P264CA0116.FRAP264.PROD.OUTLOOK.COM (2603:10a6:100:19::32)
+
+ by PR2P264MB0016.FRAP264.PROD.OUTLOOK.COM (2603:10a6:101:5::21) with
+
+ Microsoft SMTP Server (version=TLS1_2,
+
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16; Mon, 14 Oct
+
+ 2019 08:06:05 +0000
+
+Received: from HE1EUR02FT059.eop-EUR02.prod.protection.outlook.com
+
+ (2a01:111:f400:7e05::205) by PR0P264CA0116.outlook.office365.com
+
+ (2603:10a6:100:19::32) with Microsoft SMTP Server (version=TLS1_2,
+
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2347.16 via Frontend
+
+ Transport; Mon, 14 Oct 2019 08:06:05 +0000
+
+Authentication-Results: spf=pass (sender IP is 40.92.71.92)
+
+ smtp.mailfrom=hotmail.fr; isen.yncrea.fr; dkim=none (message not signed)
+
+ header.d=none;isen.yncrea.fr; dmarc=pass action=none
+
+ header.from=hotmail.fr;compauth=pass reason=100
+
+Received-SPF: Pass (protection.outlook.com: domain of hotmail.fr designates
+
+ 40.92.71.92 as permitted sender) receiver=protection.outlook.com;
+
+ client-ip=40.92.71.92; helo=EUR03-DB5-obe.outbound.protection.outlook.com;
+
+Received: from EUR03-DB5-obe.outbound.protection.outlook.com (40.92.71.92) by
+
+ HE1EUR02FT059.mail.protection.outlook.com (10.152.11.25) with Microsoft SMTP
+
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+
+ 15.20.2347.16 via Frontend Transport; Mon, 14 Oct 2019 08:06:03 +0000
+
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+
+ b=C+TQl/68GekoPp5nos6ugI6D0KB28ViinILXIiZIlgGCauxsbKkE9teV70z0HSPEBa4pUyEJE3it39XECGQtJ8DDJo0Xu6cvmrvPvH46ZZKeaCsrqy9GyyEWQ+/3LtZ3w81mTxWjaHa3a0YiOiXI6G8WXlMJPNxaFTiSY0umpJOhpwjaWjXC33E43TWMk/dy1by2ggr8bAh6rFqqHjL9ejyrjaj3Hajf/Uz4anW9yoVBscEu3V8HTcs04UvnWfpO+hLaClqWhN1AslsZi4ruWRCAY5qKfNioPobotCN32Iv/DtzXDIf1jvZ/rc/UoSjUZ8Ha4mxXipRhNFu7Vu0HPg==
+
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+
+ s=arcselector9901;
+
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+
+ bh=FMK0RPUW+sYl8/+U/QCvSv6TYZix2qN68V/3//+Thvs=;
+
+ b=Mbnq7EwfHECRupDVT4y0n9KTgnIGnDlnRqEJnA5/JN9mIFqq+g3BUESEtOceIar/FzuWsZWXyb0gQqAA1lDtE3v9aufZ1XP3mFKlHysqz9wCgrKT+wuYaB/fN/np1qQKePKYVSntVCQGqr/xi7/xiqOuTzhbwzobmXQO+BUPvXKuibrUMasXw4gQo3Pnp5X3aoqRqgU60oILe6v2pG/+Xyre+RZGYUfN/dSaqT5rZGOY07SCHB8dx0R+zkGczlt9mafu1dIOpAuoSdy5Uax2JsUp3HsPqnyLjM3oJuQ5wYBYOHAEck5SSwYRkPVoZLnp5744vuMqLMoeVaZJYv3HgA==
+
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+
+ dkim=none; arc=none
+
+Received: from AM5EUR03FT039.eop-EUR03.prod.protection.outlook.com
+
+ (10.152.16.58) by AM5EUR03HT128.eop-EUR03.prod.protection.outlook.com
+
+ (10.152.17.129) with Microsoft SMTP Server (version=TLS1_2,
+
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2305.15; Mon, 14 Oct
+
+ 2019 08:06:02 +0000
+
+Received: from AM0PR01MB6145.eurprd01.prod.exchangelabs.com (10.152.16.60) by
+
+ AM5EUR03FT039.mail.protection.outlook.com (10.152.17.185) with Microsoft SMTP
+
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+
+ 15.20.2305.15 via Frontend Transport; Mon, 14 Oct 2019 08:06:02 +0000
+
+Received: from AM0PR01MB6145.eurprd01.prod.exchangelabs.com
+
+ ([fe80::f4eb:ca17:5a4:28eb]) by AM0PR01MB6145.eurprd01.prod.exchangelabs.com
+
+ ([fe80::f4eb:ca17:5a4:28eb%6]) with mapi id 15.20.2347.023; Mon, 14 Oct 2019
+
+ 08:06:02 +0000
+
+From: Quentin Bo?ns <qboens@hotmail.fr>
+
+To: "pierre.marez@isen.yncrea.fr" <pierre.marez@isen.yncrea.fr>
+
+Subject: Essai_mail
+
+Thread-Topic: Essai_mail
+
+Thread-Index: AQHVgmYaPzccQzFe+EKdrtqF9Gz3FQ==
+
+Date: Mon, 14 Oct 2019 08:06:02 +0000
+
+Message-ID:
+
+ <AM0PR01MB6145AD7AB3D508A287EBAD37BE900@AM0PR01MB6145.eurprd01.prod.exchangelabs.com>
+
+Accept-Language: fr-FR, en-US
+
+Content-Language: fr-FR
+
+X-MS-Has-Attach:
+
+X-MS-TNEF-Correlator:
+
+x-incomingtopheadermarker:
+
+ OriginalChecksum:DCAF0F33B48A1B5BEE49DFCD3050D16EF6B8BC603E8F808ED31F213E6C931E74;UpperCasedChecksum:4712D9BDF87DB5E6F62C364A57768E29AA67A5CE0E9CAAF951219E0DAB735EE8;SizeAsReceived:6621;Count:41
+
+x-tmn: [Xl7ntqSjXnU/CkTzFucmsnPiZ+0etg7c]
+
+x-ms-publictraffictype: Email
+
+x-incomingheadercount: 41
+
+x-eopattributedmessage: 1
+
+X-MS-TrafficTypeDiagnostic: AM5EUR03HT128:|PR2P264MB0016:
+
+X-Microsoft-Antispam-Untrusted: BCL:0;
+
+X-Microsoft-Antispam-Message-Info-Original:
+
+ Mjy48f/PcESSvsXcmy4s1Vv3y6OzdODXXX1O2gZ1qyAud1Ni+li4Y0qrDg6KQKmm
+
+x-ms-exchange-transport-forked: True
+
+Content-Type: multipart/alternative;
+
+	boundary="_000_AM0PR01MB6145AD7AB3D508A287EBAD37BE900AM0PR01MB6145eurp_"
+
+MIME-Version: 1.0
+
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM5EUR03HT128
+
+Return-Path: qboens@hotmail.fr
+
+X-MS-Exchange-Organization-ExpirationStartTime: 14 Oct 2019 08:06:05.3094
+
+ (UTC)
+
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+
+X-MS-Exchange-Organization-Network-Message-Id:
+
+ 5ec70897-2d9a-49eb-cab4-08d7507d5cba
+
+X-EOPTenantAttributedMessage: 89734289-a3cf-4052-9021-195a7bba4992:0
+
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+
+ HE1EUR02FT059.eop-EUR02.prod.protection.outlook.com
+
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted:
+
+ HE1EUR02FT059.eop-EUR02.prod.protection.outlook.com
+
+X-Forefront-Antispam-Report:
+
+ CIP:40.92.71.92;IPV:NLI;CTRY:IE;EFV:NLI;SFV:NSPM;SFS:(4636009)(189003)(199004)(5660300002)(52536014)(6916009)(22186003)(99286004)(102836004)(6506007)(7696005)(82202003)(356004)(16003)(7116003)(54896002)(55016002)(6306002)(9686003)(6436002)(19618925003)(26005)(126002)(476003)(86362001)(486006)(58800400005)(336012)(5640700003)(2501003)(106002)(16586007)(14454004)(5000100001)(564344004)(2351001)(7636002)(74316002)(25786009)(71190400001)(1096003)(8676002)(246002)(33656002);DIR:INB;SFP:;SCL:1;SRVR:PR2P264MB0016;H:EUR03-DB5-obe.outbound.protection.outlook.com;FPR:;SPF:Pass;LANG:fr;PTR:mail-oln040092071092.outbound.protection.outlook.com;MX:1;A:1;
+
+X-MS-Exchange-Organization-AuthSource:
+
+ HE1EUR02FT059.eop-EUR02.prod.protection.outlook.com
+
+X-MS-Exchange-Organization-AuthAs: Anonymous
+
+X-MS-Office365-Filtering-Correlation-Id: 5ec70897-2d9a-49eb-cab4-08d7507d5cba
+
+X-MS-Oob-TLC-OOBClassifiers: OLM:1728;
+
+X-MS-Exchange-Organization-SCL: 1
+
+X-Microsoft-Antispam: BCL:0;
+
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 14 Oct 2019 08:06:03.6861
+
+ (UTC)
+
+X-MS-Exchange-CrossTenant-Network-Message-Id: 5ec70897-2d9a-49eb-cab4-08d7507d5cba
+
+X-MS-Exchange-CrossTenant-Id: 89734289-a3cf-4052-9021-195a7bba4992
+
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PR2P264MB0016
+
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.7071427
+
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+
+X-Microsoft-Antispam-Mailbox-Delivery:
+
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+
+X-Microsoft-Antispam-Message-Info:
+
+	N7hJYLTrXWI7Nh/W9X6sVsQSrNVy9GM6H9XFK/G28Y3P6RfGpP03YmrAVnqmd902d9elIFjG6lVOYW1V6yeGyaFrjNSP4iEuzXIJ9GbezWGKMRN4YZ8GHnMQVWhu/bUUO6s0GatBobk+MT015LgGT28e03LCBfqjq7SX7KdBYFOwGHx0IHdmJxcvwofk3EDfRpArH8wDB6HnUWnLTScU3GGv8IVzBcEETDopgVJQvktIdAXRTcPVmXDIEyuomV8nyonLq1AQWRBWv817queyCAVsVCM+4TYllZVYqu97GsiKGaqMsGG77owE1EgAZhTn6NhaNLr6+z++oaO/RuD751TlHF2Jh+uQBZ11rlvw8be1PKLuWpWaDiOYARlMhKuzWIb7EYgwuqLoAbd66F+ugFYP+Bvx856vUfS3n+ZBtgOqnUfbf/OFrz1hJuz/5Xh2HR40svSZ8qQBTCtXtIEgvOZFMjATCoV5LV/Cq3pSkLQHmqjmfgbDUTDFeB5lrZCVsoPujy3jdHBma81LU2Brfv2yok6hskY4YAd6/yHiDfvtJyGDJfqx3ODT0Ek/L3n+w9JLIlyDtNhWKbR1AL+a+aBmBHiW7UDT5Op0MmsgZ7nFKGVWGWgC5iHRjD4LKxYYe2QnwPt+lpOBKwcaSPVDzEw3JxYJrTSzjwLfI8JyxRYzddYNK/yg2hqSOB8AH9CH9iB5ozH/9XAhjW8rxuly8swS7HydVi0BIXBE6sFhUVcx2Fge419NfLew3XiCPoU+T/tAJEjoDKSVrV5KmcpAx4pRb6fa3BtlZ2+0Ldljvn+LL4iJ9X4kVd3khBh0/GFKXj2906ZPSsnNB/9pipXstlYa9g1aOKQxlQDYOuGOtx8WT6ahEdTrl6ju6RKKvCoR
+
