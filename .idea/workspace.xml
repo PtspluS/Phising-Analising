@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9649e515-bd80-4cba-82c9-cd3c2d7789ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/advanced_bot.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Analyser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Email.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Link_analyser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Link_analyser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Neural_Network.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Neural_Network.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recevoir_email_complet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recevoir_email_complet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/save.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/save.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -242,6 +234,7 @@
       <workItem from="1576612001012" duration="745000" />
       <workItem from="1576617384316" duration="1879000" />
       <workItem from="1576619652434" duration="3379000" />
+      <workItem from="1576669654973" duration="1615000" />
     </task>
     <task id="LOCAL-00001" summary="create functions to analyse the link">
       <created>1571244805650</created>
@@ -369,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576487524963</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ia ok">
+      <created>1576669855232</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576669855232</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +407,8 @@
     <MESSAGE value="Email object finish" />
     <MESSAGE value="can mark email" />
     <MESSAGE value="rien ne marche quentin" />
-    <option name="LAST_COMMIT_MESSAGE" value="rien ne marche quentin" />
+    <MESSAGE value="ia ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ia ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
