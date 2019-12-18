@@ -3,15 +3,23 @@ from keras.layers import Dense, Dropout
 from keras.optimizers import Adam
 import matplotlib.pyplot as plt
 
+model = load_model('advanced_bot.h5')
+
+
+def analyse_mail(marks):
+
+    grade = model.predict(marks)
+    return grade
 
 class Network:
 
-    def __init__(self,  create = True):
+    def __init__(self,  create = True, size_inputs = 1):
         if not create :
             self.load()
         else :
             opt = Adam(learning_rate=0.001, beta_1=0.9, beta_2=0.999, amsgrad=False)
-            imput_dim = 5
+
+            imput_dim = size_inputs
             self.model = Sequential()
             self.model.add(Dense(imput_dim, input_dim = imput_dim, kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
             self.model.add(Dense(imput_dim*4, kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
@@ -24,7 +32,7 @@ class Network:
             self.model.add(Dropout(0.5))
             self.model.add(Dense(1, kernel_initializer='random_normal', bias_initializer='ones', activation='sigmoid'))
 
-            self.model.compile(loss='mean_squared_error', optimizer=opt, metric=['accuracy'])
+            self.model.compile(loss='mean_squared_error', optimizer=opt, metrics=['accuracy'])
 
         self.model.summary()
 
@@ -42,7 +50,7 @@ class Network:
         return out
 
     def train(self, training_data, target_data, epochs = 1000, batch_size = 1, verbose = 0):
-        history = self.model.fit(training_data, target_data, epochs= epochs, batch_size= batch_size, verbose=verbose)
+        history = self.model.fit(training_data, target_data, epochs=epochs, batch_size=batch_size, verbose=verbose)
 
         scores = self.model.evaluate(training_data, target_data, verbose=1)
         print('Test loss:', scores[0])

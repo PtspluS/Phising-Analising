@@ -107,14 +107,19 @@ get_ip_from(link:str)
         - None (if it can't determine it)
 '''
 def get_ip_from(link):
-    try:
-        with requests.get(link, stream=True) as r:
+    with requests.get(link, stream=True) as r:
+        try:
             # renvoie l'ip du lien
             ip = r.raw._original_response.fp.raw._sock.getpeername()[0]
             return ip
-    except Exception as e:
-        print(e)
-        return None
+        except Exception as e:
+            # print(e)
+            try:
+                ip = r.raw._original_response.fp.raw._sock.socket.getpeername()[0]
+                return ip
+            except Exception as e:
+                print(e)
+                return None
 
 
 '''

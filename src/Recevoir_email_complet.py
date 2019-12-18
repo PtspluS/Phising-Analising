@@ -2,9 +2,13 @@ import imaplib
 import email
 from time import sleep
 from random import randint
+import importlib
+import src.Analyser
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
 mail.login('yncrea.test.projet.M1@gmail.com', 'ujikolpm')
+
+ai = importlib.import_module("Neural_Network", package=None)
 
 def efface_old_mail():
     import os

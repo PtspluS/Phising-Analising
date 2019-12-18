@@ -4,9 +4,9 @@ import mailparser
 
 
 class Email:
-    def __init__(self, raw = ""):
+    def __init__(self, raw = "", num = -1):
         self.raw = raw
-
+        self.num = num
         """
         try:
             parser = email.parser.HeaderParser()
