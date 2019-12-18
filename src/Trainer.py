@@ -1,5 +1,4 @@
 # imports
-import numpy as np
 from src.Neural_Network import Network
 from src.Email import Email
 import os

@@ -2,12 +2,12 @@ from keras.models import Sequential, load_model
 from keras.layers import Dense, Dropout
 from keras.optimizers import Adam
 import matplotlib.pyplot as plt
+import numpy as np
 
 model = load_model('advanced_bot.h5')
 
 
 def analyse_mail(marks):
-
     grade = model.predict(marks)
     return grade
 
@@ -21,7 +21,7 @@ class Network:
 
             imput_dim = size_inputs
             self.model = Sequential()
-            self.model.add(Dense(imput_dim, input_dim = imput_dim, kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
+            self.model.add(Dense(imput_dim, kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
             self.model.add(Dense(imput_dim*4, kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
             self.model.add(Dropout(0.5))
             self.model.add(Dense(imput_dim*2, kernel_initializer='random_normal', bias_initializer='ones', activation='relu'))
