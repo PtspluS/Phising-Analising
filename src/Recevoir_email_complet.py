@@ -40,9 +40,27 @@ def run():
         old_mes_nb = -1
         x = 1
 
-        mail = imaplib.IMAP4_SSL('imap.gmail.com')
-        mail.login('yncrea.test.projet.M1@gmail.com', 'ujikolpm')
+        label.connexion
+        connexion_pos = False
+        while not connexion_pos:
+            adresse = input("Adresse mail: ")
+            mdp = input("Mot de passe: ")
 
+            if("@gmail.com" in adresse):
+                connexion_pos = True
+            else:
+                print("Adresse mail non valide\n")
+                continue
+        try : 
+            mail = imaplib.IMAP4_SSL('imap.gmail.com')
+            ###Dans login : parametre 1 adresse mail###
+            ###             parametre 2 mot de passe###
+            #mail.login('yncrea.test.projet.M1@gmail.com', 'ujikolpm')
+            mail.login(adresse, mdp)
+        except Exception:
+            print("Echec connexion\n")
+            goto.connexion
+            
 
 
         while True:
@@ -130,6 +148,7 @@ def run():
     print("Good bye")
 
 run()
+
 
 
 
