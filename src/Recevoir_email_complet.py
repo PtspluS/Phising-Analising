@@ -7,6 +7,7 @@ from src.Analyser import mark_email
 from src.Email import Email
 import numpy as np
 from goto import with_goto
+from src.save import save
 
 
 ai = importlib.import_module("Neural_Network", package=None)
@@ -87,8 +88,9 @@ def run():
                 latest_email_uid = data[0].split()[- 1]
 
                 mark = mark_email(mailo)
-                mark = np.array([mark])
-                sortie_traitement = ai.analyse_mail(mark)[0][0]
+                marks = np.array([mark])
+                sortie_traitement = ai.analyse_mail(marks)[0][0]
+                save(mailo, marks=mark, grade=sortie_traitement.item())
 
                 print("Résultat traitement :", sortie_traitement)
 

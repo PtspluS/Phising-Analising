@@ -12,8 +12,10 @@ def save(Email, marks, path = 'localhost:27017', port = 0, grade = 0, stop = -1)
     :param port: The port for the data base
     :return: True if no problem or False if they are
     """
-    if stop < Email.num:
+    if stop <= Email.num:
         key = sha3_512((Email.raw).encode('utf-8')).hexdigest()
+
+        #marks = [x for x in marks]
 
         data = {'key': key, 'marks': marks, 'grade': grade}
         try:
